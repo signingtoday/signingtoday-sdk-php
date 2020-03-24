@@ -11,14 +11,14 @@
  */
 
 /**
- * Signing Today API
+ * Signing Today Web
  *
- * KlNpZ25pbmcgVG9kYXkqIGVuYWJsZXMgc2VhbWxlc3MgaW50ZWdyYXRpb24gb2YgZGlnaXRhbCBzaWduYXR1cmVzIGludG8gYW55CndlYnNpdGUgYnkgdGhlIHVzZSBvZiBlYXN5IHJlcXVlc3RzIHRvIG91ciBBUEkuIFRoaXMgaXMgdGhlIHNtYXJ0IHdheSBvZgphZGRpbmcgZGlnaXRhbCBzaWduYXR1cmUgc3VwcG9ydCB3aXRoIGEgZ3JlYXQgdXNlciBleHBlcmllbmNlLgoKCipTaWduaW5nIFRvZGF5IEFQSXMqIHVzZSBIVFRQIG1ldGhvZHMgYW5kIGFyZSBSRVNUZnVsIGJhc2VkLCBtb3Jlb3ZlciB0aGV5CmFyZSBwcm90ZWN0ZWQgYnkgYSAqc2VydmVyIHRvIHNlcnZlciBhdXRoZW50aWNhdGlvbiogc3RhbmRhcmQgYnkgdGhlIHVzZSBvZgp0b2tlbnMuCgoKKlNpZ25pbmcgVG9kYXkgQVBJcyogY2FuIGJlIHVzZWQgaW4gdGhlc2UgZW52aXJvbm1lbnRzOgoKCnwgRW52aXJvbm1lbnQgfCBEZXNjcmlwdGlvbiB8IEVuZHBvaW50IHwKfCAtLS0tLS0tLS0tLSB8IC0tLS0tLS0tLS0tIHwgLS0tLS0tLS0gfAp8IFNhbmRib3ggICAgIHwgVGVzdCBlbnZpcm9ubWVudCB8IGBodHRwczovL3NhbmRib3guc2lnbmluZ3RvZGF5LmNvbWAgfAp8IExpdmUgICAgICAgIHwgUHJvZHVjdGlvbiBlbnZpcm9ubWVudCB8IGBodHRwczovL2FwaS5zaWduaW5ndG9kYXkuY29tYCB8CgoKRm9yIGV2ZXJ5IHNpbmdsZSByZXF1ZXN0IHRvIFNpZ25pbmcgVG9kYXkgaGFzIHRvIGJlIGRlZmluZWQgdGhlIGZvbGxvd2luZwoqSFRUUCogaGVhZGVyOgotIGBBdXRob3JpemF0aW9uYCwgd2hpY2ggY29udGFpbnMgdGhlIGF1dGhlbnRpY2F0aW9uIHRva2VuLgoKSWYgdGhlIHJlcXVlc3QgaGFzIGEgYm9keSB0aGFuIGFub3RoZXIgKkhUVFAqIGhlYWRlciBpcyByZXF1ZXN0ZWQ6Ci0gYENvbnRlbnQtVHlwZWAsIHdpdGggYGFwcGxpY2F0aW9uL2pzb25gIHZhbHVlLgoKCkZvbGxvd3MgYW4gZXhhbXBsZSBvZiB1c2FnZSB0byBlbnVtZXJhdGUgYWxsIHRoZSB1c2VyIG9mICpteS1vcmcqCm9yZ2FuaXphdGlvbi4KCioqRXhhbXBsZSoqCgpgYGBqc29uCiQgY3VybCBodHRwczovL3NhbmRib3guc2lnbmluZ3RvZGF5LmNvbS9hcGkvdjEvbXktb3JnL3VzZXJzIFwKICAgIC1IICdBdXRob3JpemF0aW9uOiBUb2tlbiA8YWNjZXNzLXRva2VuPicKYGBgCgojIyBIVFRQIG1ldGhvZHMgdXNlZAoKQVBJcyB1c2UgdGhlIHJpZ2h0IEhUVFAgdmVyYiBpbiBldmVyeSBzaXR1YXRpb24uCgp8IE1ldGhvZCAgIHwgRGVzY3JpcHRpb24gICAgICAgICAgICAgICAgICAgIHwKfCAtLS0tLS0tLSB8IC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSB8CnwgYEdFVGAgICAgfCBSZXF1ZXN0IGRhdGEgZnJvbSBhIHJlc291cmNlICAgfAp8IGBQT1NUYCAgIHwgU2VuZCBkYXRhIHRvIGNyZWF0ZSBhIHJlc291cmNlIHwKfCBgUFVUYCAgICB8IFVwZGF0ZSBhIHJlc291cmNlICAgICAgICAgICAgICB8CnwgYFBBVENIYCAgfCBQYXJ0aWFsbHkgdXBkYXRlIGEgcmVzb3VyY2UgICAgfAp8IGBERUxFVEVgIHwgRGVsZXRlIGEgcmVzb3Vyc2UgICAgICAgICAgICAgIHwKCgojIyBSZXNwb25zZSBkZWZpbml0aW9uCgpBbGwgdGhlIHJlc3BvbnNlIGFyZSBpbiBKU09OIGZvcm1hdC4KQXMgcmVzcG9uc2UgdG8gYSByZXF1ZXN0IG9mIGFsbCB1c2VycyBvZiBhbiBvcmdhbml6YXRpb24geW91IHdpbGwgaGF2ZSBhCnJlc3VsdCBsaWtlIHRoaXM6CgpgYGBqc29uCnsKICAgICJwYWdpbmF0aW9uIjogewogICAgICAiY291bnQiOiA3NSwKICAgICAgInByZXZpb3VzIjogImh0dHBzOi8vc2FuZGJveC5zaWduaW5ndG9kYXkuY29tL2FwaS92MS9teS1vcmcvdXNlcnM/cGFnZT0xIiwKICAgICAgIm5leHQiOiAiaHR0cHM6Ly9zYW5kYm94LnNpZ25pbmd0b2RheS5jb20vYXBpL3YxL215LW9yZy91c2Vycz9wYWdlPTMiLAogICAgICAicGFnZXMiOiA4LAogICAgICAicGFnZSI6IDIKICAgIH0sCiAgICAibWV0YSI6IHsKICAgICAgImNvZGUiOiAyMDAKICAgIH0sCiAgICAiZGF0YSI6IFsKICAgICAgewogICAgICAgICJpZCI6ICJqZG8iLAogICAgICAgICJzdGF0dXMiOiAiZW5hYmxlZCIsCiAgICAgICAgInR5cGUiOiAiQmFzaWMgdXNlciBhY2NvdW50IiwKICAgICAgICAiZW1haWwiOiBqb2huZG9lQGR1bW15ZW1haWwuY29tLAogICAgICAgICJmaXJzdF9uYW1lIjogIkpvaG4iLAogICAgICAgICJsYXN0X25hbWUiOiAiRG9lIiwKICAgICAgICAid2FsbGV0IjogW10sCiAgICAgICAgImNyZWF0ZWRfYnkiOiAic3lzdGVtIiwKICAgICAgICAib3duZXIiOiBmYWxzZSwKICAgICAgICAiYXV0b21hdGljIjogZmFsc2UsCiAgICAgICAgInJhbyI6IGZhbHNlCiAgICAgIH0sCiAgICAgIC4uLgogICAgXQogIH0KYGBgCgpUaGUgSlNPTiBvZiB0aGUgcmVzcG9uc2UgaXMgbWFkZSBvZiB0aHJlZSBwYXJ0czoKLSBQYWdpbmF0aW9uCi0gTWV0YQotIERhdGEKCiMjIyBQYWdpbmF0aW9uCgoqUGFnaW5hdGlvbiogb2JqZWN0IGFsbG93cyB0byBzcGxpdCB0aGUgcmVzcG9uc2UgaW50byBwYXJ0cyBhbmQgdGhlbiB0bwpyZWJ1aWxkIGl0IHNlcXVlbnRpYWxseSBieSB0aGUgdXNlIG9mIGBuZXh0YCBhbmQgYHByZXZpb3VzYCBwYXJhbWV0ZXJzLCBieQp3aGljaCB5b3UgZ2V0IHByZXZpb3VzIGFuZCBmb2xsb3dpbmcgYmxvY2tzLiBUaGUgKlBhZ2luYXRpb24qIGlzIHByZXNlbnQKb25seSBpZiB0aGUgcmVzcG9uc2UgaXMgYSBsaXN0IG9mIG9iamVjdHMuCgpUaGUgZ2VuZXJhbCBzdHJ1Y3R1cmUgb2YgKlBhZ2luYXRpb24qIG9iamVjdCBpcyB0aGUgZm9sbG93aW5nOgoKYGBganNvbgp7CiAgICAicGFnaW5hdGlvbiI6IHsKICAgICAgImNvdW50IjogNzUsCiAgICAgICJwcmV2aW91cyI6ICJodHRwczovL3NhbmRib3guc2lnbmluZ3RvZGF5LmNvbS9hcGkvdjEvbXktb3JnL3VzZXJzP3BhZ2U9MSIsCiAgICAgICJuZXh0IjogImh0dHBzOi8vc2FuZGJveC5zaWduaW5ndG9kYXkuY29tL2FwaS92MS9teS1vcmcvdXNlcnM/cGFnZT0zIiwKICAgICAgInBhZ2VzIjogOCwKICAgICAgInBhZ2UiOiAyCiAgICB9LAogICAgLi4uCiAgfQpgYGAKCiMjIyBNZXRhCgoqTWV0YSogb2JqZWN0IGlzIHVzZWQgdG8gZW5yaWNoIHRoZSBpbmZvcm1hdGlvbiBhYm91dCB0aGUgcmVzcG9uc2UuIEluIHRoZQpwcmV2aW91cyBleGFtcGxlLCBhIHN1Y2Nlc3NmdWwgY2FzZSBvZiByZXNwb25zZSwgKk1ldGEqIHdpbGwgaGF2ZSB2YWx1ZQpgc3RhdHVzOiAyWFhgLiBJbiBjYXNlIG9mIHVuc3VjY2Vzc2Z1bCByZXNwb25zZSwgKk1ldGEqIHdpbGwgaGF2ZSBmdXJ0aGVyCmluZm9ybWF0aW9uLCBhcyBmb2xsb3dzOgoKYGBganNvbgp7CiAgICAibWV0YSI6IHsKICAgICAgImNvZGUiOiA8SFRUUCBTVEFUVVMgQ09ERT4sCiAgICAgICJlcnJvcl90eXBlIjogPFNUQVRVUyBDT0RFIERFU0NSSVBUSU9OPiwKICAgICAgImVycm9yX21lc3NhZ2UiOiA8RVJST1IgREVTQ1JJUFRJT04+CiAgICB9CiAgfQpgYGAKCiMjIyBEYXRhCgoqRGF0YSogb2JqZWN0IG91dHB1dHMgYXMgb2JqZWN0IG9yIGxpc3Qgb2YgdGhlbS4gQ29udGFpbnMgdGhlIGV4cGVjdGVkIGRhdGEKYXMgcmVxdWVzdGVkIHRvIHRoZSBBUEkuCgojIyBTZWFyY2ggZmlsdGVycwoKU2VhcmNoIGZpbHRlcnMgb2YgdGhlIEFQSSBoYXZlIHRoZSBmb2xsb3dpbmcgc3RydWN0dXJlOgoKYHdoZXJlX0FUVFJJQlVURU5BTUVgPWBWQUxVRWAKCkluIHRoaXMgd2F5IHlvdSBtYWtlIGEgY2FzZS1zZW5zaXRpdmUgc2VhcmNoIG9mICpWQUxVRSouIFlvdSBjYW4gZXh0ZW5kIGl0CnRocm91Z2ggdGhlIERqYW5nbyBsb29rdXAsIG9idGFpbmluZyBtb3JlIHNwZWNpZmljIGZpbHRlcnMuIEZvciBleGFtcGxlOgoKYHdoZXJlX0FUVFJJQlVURU5BTUVfX0xPT0tVUGA9YFZBTFVFYAoKd2hlcmUgKkxPT0tVUCogY2FuIGJlIHJlcGxhY2VkIHdpdGggYGljb250YWluc2AgdG8gaGF2ZSBhIHBhcnRpYWwgaW5zZW5zaXRpdmUKcmVzZWFyY2gsIHdoZXJlCgpgd2hlcmVfZmlyc3RfbmFtZV9faWNvbnRhaW5zYD1gQ0hhYAoKbWF0Y2hlcyB3aXRoIGV2ZXJ5IHVzZXIgdGhhdCBoYXZlIHRoZSAqY2hhKiBzdHJpbmcgaW4gdGhlaXIgbmFtZSwgd2l0aApubyBkaWZmZXJlbmNlcyBiZXR3ZWVuIGNhcGl0YWwgYW5kIGxvd2VyIGNhc2VzLgoKW0hlcmVdKGh0dHBzOi8vZG9jcy5kamFuZ29wcm9qZWN0LmNvbS9lbi8xLjExL3JlZi9tb2RlbHMvcXVlcnlzZXRzLyNmaWVsZC1sb29rdXBzKQp0aGUgbGlzdCBvZiB0aGUgbG9va3Vwcy4KCiMjIFdlYmhvb2tzCgpTaWduaW5nIFRvZGF5IHN1cHBvcnRzIHdlYmhvb2tzIGZvciB0aGUgdXBkYXRlIG9mIERTVHMgYW5kIGlkZW50aXRpZXMgc3RhdHVzLgpZb3UgY2FuIGNob29zZSBpZiB0byB1c2Ugb3Igbm90IHdlYmhvb2tzIGFuZCBpZiB5b3Ugd2FudCB0byByZWNlaXZlIHVwZGF0ZXMKYWJvdXQgRFNUcyBhbmQvb3IgaWRlbnRpdGllcy4gWW91IGNhbiBjb25maWd1cmF0ZSBpdCBvbiBhcHBsaWNhdGlvbiB0b2tlbgpsZXZlbCwgaW4gdGhlICp3ZWJob29rKiBmaWVsZCwgYXMgZm9sbG93czoKCmBgYGpzb24KIndlYmhvb2tzIjogewogICJkc3QiOiAiVVJMIiwKICAiaWRlbnRpdHkiOiAiVVJMIgogIH0KYGBgCgojIyMgRFNUcyBzdGF0dXMgdXBkYXRlCgpEU1RzIHNlbmQgdGhlIGZvbGxvd2luZyBzdGF0dXMgdXBkYXRlczoKLSAqKkRTVF9TVEFUVVNfQ0hBTkdFRCoqOiB3aGVuZXZlciB0aGUgRFNUIGNoYW5nZXMgaXRzIHN0YXR1cwotICoqU0lHTkFUVVJFX1NUQVRVU19DSEFOR0VEKio6IHdoZW5ldmVyIG9uZSBvZiB0aGUgc2lnbmF0dXJlcyBjaGFuZ2VzIGl0cwpzdGF0dXMKCiMjIyMgRFNUX1NUQVRVU19DSEFOR0VECgpTZW5kcyB0aGUgZm9sbG93aW5nIGluZm9ybWF0aW9uOgoKYGBganNvbgp7CiAgICAibWVzc2FnZSI6ICJEU1RfU1RBVFVTX0NIQU5HRUQiLAogICAgImRhdGEiOiB7CiAgICAgICJzdGF0dXMiOiAiPERTVF9TVEFUVVM+IiwKICAgICAgImRzdCI6ICI8RFNUX0lEPiIsCiAgICAgICJyZWFzb24iOiAiPERTVF9SRUFTT04+IgogICAgfQogIH0KYGBgCgojIyMjIFNJR05BVFVSRV9TVEFUVVNfQ0hBTkdFRAoKU2VuZHMgdGhlIGZvbGxvd2luZyBpbmZvcm1hdGlvbjoKCmBgYGpzb24KewogICAgIm1lc3NhZ2UiOiAiU0lHTkFUVVJFX1NUQVRVU19DSEFOR0VEIiwKICAgICJkYXRhIjogewogICAgICAic3RhdHVzIjogIjxTSUdOQVRVUkVfU1RBVFVTPiIsCiAgICAgICJncm91cCI6IDxNRU1CRVJTSElQX0dST1VQX0lOREVYPiwKICAgICAgImRzdCI6IHsKICAgICAgICAiaWQiOiAiPERTVF9JRD4iLAogICAgICAgICJ0aXRsZSI6ICI8RFNUX1RJVExFPiIKICAgICAgfSwKICAgICAgInNpZ25hdHVyZSI6ICI8U0lHTkFUVVJFX0lEPiIsCiAgICAgICJzaWduZXIiOiAiPFNJR05FUl9VU0VSTkFNRT4iLAogICAgICAicG9zaXRpb24iOiAiPFNJR05BVFVSRV9QT1NJVElPTj4iLAogICAgICAiZG9jdW1lbnQiOiB7CiAgICAgICAgImRpc3BsYXlfbmFtZSI6ICI8RE9DVU1FTlRfVElUTEU+IiwKICAgICAgICAiaWQiOiAiPERPQ1VNRU5UX0lEPiIsCiAgICAgICAgIm9yZGVyIjogPERPQ1VNRU5UX0lOREVYPgogICAgICB9LAogICAgICAiYXV0b21hdGljIjogPERFQ0xBUkVTX0lGX1RIRV9TSUdORVJfSVNfQVVUT01BVElDPiwKICAgICAgInBhZ2UiOiAiPFNJR05BVFVSRV9QQUdFPiIKICAgIH0KICB9CmBgYAoKIyMjIElkZW50aXRpZXMgc3RhdHVzIHVwZGF0ZQoKSWRlbnRpdGllcyBzZW5kIHRoZSBmb2xsb3dpbmcgc3RhdHVzIHVwZGF0ZXM6Ci0gKipJREVOVElUWV9SRVFVRVNUX0VOUk9MTEVEKio6IHdoZW5ldmVyIGFuIGlkZW50aXR5IHJlcXVlc3QgaXMgYWN0aXZhdGVkCgojIyMjIElERU5USVRZX1JFUVVFU1RfRU5ST0xMRUQKClNlbmRzIHRoZSBmb2xsb3dpbmcgaW5mb3JtYXRpb246CgpgYGBqc29uCnsKICAgICJtZXNzYWdlIjogIklERU5USVRZX1JFUVVFU1RfRU5ST0xMRUQiLAogICAgImRhdGEiOiB7CiAgICAgICJzdGF0dXMiOiAiPFJFUVVFU1RfU1RBVFVTPiIsCiAgICAgICJyZXF1ZXN0IjogIjxSRVFVRVNUX0lEPiIsCiAgICAgICJ1c2VyIjogIjxBUFBMSUNBTlRfVVNFUk5BTUU+IgogICAgfQogIH0KYGBgCgojIyMgVXJsYmFjawoKU29tZXRpbWVzIG1heSBiZSBuZWNlc3NhcnkgdG8gbWFrZSBhIHJlZGlyZWN0IGFmdGVyIGFuIHVzZXIsIGZyb20gdGhlCnNpZ25hdHVyZSB0cmF5LCBoYXMgY29tcGxldGVkIGhpcyBvcGVyYXRpb25zIG9yIGFjdGl2YXRlZCBhIGNlcnRpZmljYXRlLgoKSWYgc2V0LCByZWRpcmVjdHMgY291bGQgaGFwcGVuIGluIDMgY2FzZXM6Ci0gYWZ0ZXIgYSBzaWduYXR1cmUgb3IgZGVjbGluZQotIGFmdGVyIGEgRFNUIGhhcyBiZWVuIHNpZ25lZCBieSBhbGwgdGhlIHNpZ25lcnMgb3IgY2FuY2VsZWQKLSBhZnRlciB0aGUgYWN0aXZhdGlvbiBvZiBhIGNlcnRpZmljYXRlCgpJbiB0aGUgZmlyc3QgdHdvIGNhc2VzIHRoZSB1cmxiYWNrIHJldHVybnMgdGhlIGZvbGxvd2luZyBpbmZvcm1hdGlvbiB0aHJvdWdoCmEgZGF0YSBmb3JtOgotICoqZHN0LWlkKio6IGlkIG9mIHRoZSBEU1QKLSAqKmRzdC11cmwqKjogc2lnbmF0dXJlX3RpY2tldCBvZiB0aGUgc2lnbmF0dXJlCi0gKipkc3Qtc3RhdHVzKio6IGN1cnJlbnQgc3RhdHVzIG9mIHRoZSBEU1QKLSAqKmRzdC1zaWduYXR1cmUtaWQqKjogaWQgb2YgdGhlIHNpZ25hdHVyZQotICoqZHN0LXNpZ25hdHVyZS1zdGF0dXMqKjogY3VycmVudCBzdGF0dXMgb2YgdGhlIHNpZ25hdHVyZQotICoqdXNlcioqOiB1c2VybmFtZSBvZiB0aGUgc2lnbmVyCi0gKipkZWNsaW5lLXJlYXNvbioqOiBpbiBjYXNlIG9mIGEgcmVmdXNlZCBEU1QgY29udGFpbnMgdGhlIHJlYXNvbiBvZiB0aGUKZGVjbGluZQoKSW4gdGhlIGxhc3QgY2FzZSB0aGUgdXJsYmFjayByZXR1cm5zIHRoZSBmb2xsb3dpbmcgaW5mb3JtYXRpb24gdGhyb3VnaCBhCmRhdGEgZm9ybToKLSAqKnVzZXIqKjogdXNlcm5hbWUgb2YgdGhlIHVzZXIgYWN0aXZhdGVkIHRoZSBjZXJ0aWZpY2F0ZQotICoqaWRlbnRpdHktcHJvdmlkZXIqKjogdGhlIHByb3ZpZGVyIGhhcyBiZWVuIHVzZWQgdG8gaXNzdWUgdGhlIGNlcnRpZmljYXRlCi0gKippZGVudGl0eS1yZXF1ZXN0LWlkKio6IGlkIG9mIHRoZSBlbnJvbGxtZW50IHJlcXVlc3QKLSAqKmlkZW50aXR5LWlkKio6IGlkIG9mIHRoZSBuZXcgaWRlbnRpdHkKLSAqKmlkZW50aXR5LWxhYmVsKio6IHRoZSBsYWJlbCBhc3NpZ25lZCB0byB0aGUgaWRlbnRpdHkKLSAqKmlkZW50aXR5LWNlcnRpZmljYXRlKio6IHB1YmxpYyBrZXkgb2YgdGhlIGNlcnRpZmljYXRlCgoK
+ * *Signing Today* is the perfect Digital Signature Gateway. Whenever in Your workflow You need to add one or more Digital Signatures to Your document, *Signing Today* is the right choice. You prepare Your documents, *Signing Today* takes care of all the rest: send invitations (`signature tickets`) to signers, collects their signatures, send You back the signed document. Integrating *Signing Today* in Your existing applications is very easy. Just follow these API specifications and get inspired by the many examples presented hereafter.
  *
- * The version of the OpenAPI document: 1.5.0
- * Contact: smartcloud@bit4id.com
+ * The version of the OpenAPI document: 2.0.0
+ * 
  * Generated by: https://openapi-generator.tech
- * OpenAPI Generator version: 4.1.0
+ * OpenAPI Generator version: 4.2.3
  */
 
 /**
@@ -36,7 +36,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * User Class Doc Comment
  *
  * @category Class
- * @description The User object is one of the components of the organization, which can sign digital signature transactions through one of the identities it got in the its wallet. Some of the most specific fields of this object are _\&quot;automatic\&quot;_, _\&quot;rao\&quot;_ and _\&quot;owner\&quot;_. They are boolean values. The first one indicates if the User can sign dsts into an automatic way, without passing through the signature tray. The rao field allows the User to enroll identities for the users of its organization. At last the owner field means that the token associated to the organization belongs to it and thus this particular User has administrative permissions.
+ * @description The **User** object is the one that serializes the users of the _Organizations_. The _User_ has field that identifies the generality of the person who has been registered and uses the platform, as well as the digital identities through which he can sign documents.
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -58,17 +58,22 @@ class User implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'automatic' => 'bool',
-        'created_by' => 'string',
-        'email' => 'string',
-        'first_name' => 'string',
         'id' => 'string',
-        'last_name' => 'string',
-        'owner' => 'bool',
-        'rao' => 'bool',
-        'status' => 'string',
-        'type' => 'string',
-        'wallet' => '\OpenAPI\Client\Model\Identity[]'
+        'username' => 'string',
+        'domain' => 'string',
+        'language' => 'string',
+        'name' => 'string',
+        'surname' => 'string',
+        'email' => 'string',
+        'phone' => 'BigDecimal',
+        'role' => 'string',
+        'groups' => '\OpenAPI\Client\Model\UserGroup[]',
+        'capabilities' => 'string[]',
+        'created_by' => 'string',
+        'created_at' => '\DateTime',
+        'deleted_at' => '\DateTime',
+        'automatic' => 'bool',
+        'extra_data' => 'map[string,object]'
     ];
 
     /**
@@ -77,17 +82,22 @@ class User implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'automatic' => null,
-        'created_by' => 'any',
-        'email' => 'email',
-        'first_name' => 'any',
         'id' => 'uuid',
-        'last_name' => 'any',
-        'owner' => null,
-        'rao' => null,
-        'status' => 'any',
-        'type' => 'any',
-        'wallet' => null
+        'username' => 'any',
+        'domain' => 'any',
+        'language' => 'string',
+        'name' => 'any',
+        'surname' => 'any',
+        'email' => 'email',
+        'phone' => 'number',
+        'role' => 'any',
+        'groups' => null,
+        'capabilities' => null,
+        'created_by' => 'uuid',
+        'created_at' => 'date-time',
+        'deleted_at' => 'date-time',
+        'automatic' => null,
+        'extra_data' => null
     ];
 
     /**
@@ -117,17 +127,22 @@ class User implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'automatic' => 'automatic',
-        'created_by' => 'created_by',
-        'email' => 'email',
-        'first_name' => 'first_name',
         'id' => 'id',
-        'last_name' => 'last_name',
-        'owner' => 'owner',
-        'rao' => 'rao',
-        'status' => 'status',
-        'type' => 'type',
-        'wallet' => 'wallet'
+        'username' => 'username',
+        'domain' => 'domain',
+        'language' => 'language',
+        'name' => 'name',
+        'surname' => 'surname',
+        'email' => 'email',
+        'phone' => 'phone',
+        'role' => 'role',
+        'groups' => 'groups',
+        'capabilities' => 'capabilities',
+        'created_by' => 'createdBy',
+        'created_at' => 'createdAt',
+        'deleted_at' => 'deletedAt',
+        'automatic' => 'automatic',
+        'extra_data' => 'extraData'
     ];
 
     /**
@@ -136,17 +151,22 @@ class User implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'automatic' => 'setAutomatic',
-        'created_by' => 'setCreatedBy',
-        'email' => 'setEmail',
-        'first_name' => 'setFirstName',
         'id' => 'setId',
-        'last_name' => 'setLastName',
-        'owner' => 'setOwner',
-        'rao' => 'setRao',
-        'status' => 'setStatus',
-        'type' => 'setType',
-        'wallet' => 'setWallet'
+        'username' => 'setUsername',
+        'domain' => 'setDomain',
+        'language' => 'setLanguage',
+        'name' => 'setName',
+        'surname' => 'setSurname',
+        'email' => 'setEmail',
+        'phone' => 'setPhone',
+        'role' => 'setRole',
+        'groups' => 'setGroups',
+        'capabilities' => 'setCapabilities',
+        'created_by' => 'setCreatedBy',
+        'created_at' => 'setCreatedAt',
+        'deleted_at' => 'setDeletedAt',
+        'automatic' => 'setAutomatic',
+        'extra_data' => 'setExtraData'
     ];
 
     /**
@@ -155,17 +175,22 @@ class User implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'automatic' => 'getAutomatic',
-        'created_by' => 'getCreatedBy',
-        'email' => 'getEmail',
-        'first_name' => 'getFirstName',
         'id' => 'getId',
-        'last_name' => 'getLastName',
-        'owner' => 'getOwner',
-        'rao' => 'getRao',
-        'status' => 'getStatus',
-        'type' => 'getType',
-        'wallet' => 'getWallet'
+        'username' => 'getUsername',
+        'domain' => 'getDomain',
+        'language' => 'getLanguage',
+        'name' => 'getName',
+        'surname' => 'getSurname',
+        'email' => 'getEmail',
+        'phone' => 'getPhone',
+        'role' => 'getRole',
+        'groups' => 'getGroups',
+        'capabilities' => 'getCapabilities',
+        'created_by' => 'getCreatedBy',
+        'created_at' => 'getCreatedAt',
+        'deleted_at' => 'getDeletedAt',
+        'automatic' => 'getAutomatic',
+        'extra_data' => 'getExtraData'
     ];
 
     /**
@@ -209,8 +234,56 @@ class User implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
+    const LANGUAGE_IT = 'it';
+    const LANGUAGE_EN = 'en';
+    const LANGUAGE_ES = 'es';
+    const LANGUAGE_FR = 'fr';
+    const ROLE_ADMIN = 'admin';
+    const ROLE_INSTRUCTOR = 'instructor';
+    const ROLE_SIGNER = 'signer';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getLanguageAllowableValues()
+    {
+        return [
+            self::LANGUAGE_IT,
+            self::LANGUAGE_EN,
+            self::LANGUAGE_ES,
+            self::LANGUAGE_FR,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getRoleAllowableValues()
+    {
+        return [
+            self::ROLE_ADMIN,
+            self::ROLE_INSTRUCTOR,
+            self::ROLE_SIGNER,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getCapabilitiesAllowableValues()
+    {
+        return [
+            
+        ];
+    }
     
 
     /**
@@ -228,17 +301,22 @@ class User implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['automatic'] = isset($data['automatic']) ? $data['automatic'] : null;
-        $this->container['created_by'] = isset($data['created_by']) ? $data['created_by'] : null;
-        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
-        $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
-        $this->container['owner'] = isset($data['owner']) ? $data['owner'] : null;
-        $this->container['rao'] = isset($data['rao']) ? $data['rao'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['wallet'] = isset($data['wallet']) ? $data['wallet'] : null;
+        $this->container['username'] = isset($data['username']) ? $data['username'] : null;
+        $this->container['domain'] = isset($data['domain']) ? $data['domain'] : null;
+        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['surname'] = isset($data['surname']) ? $data['surname'] : null;
+        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
+        $this->container['role'] = isset($data['role']) ? $data['role'] : null;
+        $this->container['groups'] = isset($data['groups']) ? $data['groups'] : null;
+        $this->container['capabilities'] = isset($data['capabilities']) ? $data['capabilities'] : null;
+        $this->container['created_by'] = isset($data['created_by']) ? $data['created_by'] : null;
+        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['deleted_at'] = isset($data['deleted_at']) ? $data['deleted_at'] : null;
+        $this->container['automatic'] = isset($data['automatic']) ? $data['automatic'] : null;
+        $this->container['extra_data'] = isset($data['extra_data']) ? $data['extra_data'] : null;
     }
 
     /**
@@ -250,9 +328,22 @@ class User implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
+        $allowedValues = $this->getLanguageAllowableValues();
+        if (!is_null($this->container['language']) && !in_array($this->container['language'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'language', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
         }
+
+        $allowedValues = $this->getRoleAllowableValues();
+        if (!is_null($this->container['role']) && !in_array($this->container['role'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'role', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
         return $invalidProperties;
     }
 
@@ -269,49 +360,154 @@ class User implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets automatic
+     * Gets id
      *
-     * @return bool|null
+     * @return string|null
      */
-    public function getAutomatic()
+    public function getId()
     {
-        return $this->container['automatic'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets automatic
+     * Sets id
      *
-     * @param bool|null $automatic If true indicates that the User is an _automatic_ one, thus the signature procedure will be different from a regular signer
+     * @param string|null $id The unique id of the User
      *
      * @return $this
      */
-    public function setAutomatic($automatic)
+    public function setId($id)
     {
-        $this->container['automatic'] = $automatic;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets created_by
+     * Gets username
      *
      * @return string|null
      */
-    public function getCreatedBy()
+    public function getUsername()
     {
-        return $this->container['created_by'];
+        return $this->container['username'];
     }
 
     /**
-     * Sets created_by
+     * Sets username
      *
-     * @param string|null $created_by This field shows who created the User - _user_name@organization-id_. It may be a SigningToday system User as well
+     * @param string|null $username The username of the User. The username is used to login
      *
      * @return $this
      */
-    public function setCreatedBy($created_by)
+    public function setUsername($username)
     {
-        $this->container['created_by'] = $created_by;
+        $this->container['username'] = $username;
+
+        return $this;
+    }
+
+    /**
+     * Gets domain
+     *
+     * @return string|null
+     */
+    public function getDomain()
+    {
+        return $this->container['domain'];
+    }
+
+    /**
+     * Sets domain
+     *
+     * @param string|null $domain The _domain_ is the Organization which a user or a DST belongs
+     *
+     * @return $this
+     */
+    public function setDomain($domain)
+    {
+        $this->container['domain'] = $domain;
+
+        return $this;
+    }
+
+    /**
+     * Gets language
+     *
+     * @return string|null
+     */
+    public function getLanguage()
+    {
+        return $this->container['language'];
+    }
+
+    /**
+     * Sets language
+     *
+     * @param string|null $language The default language of the User
+     *
+     * @return $this
+     */
+    public function setLanguage($language)
+    {
+        $allowedValues = $this->getLanguageAllowableValues();
+        if (!is_null($language) && !in_array($language, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'language', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['language'] = $language;
+
+        return $this;
+    }
+
+    /**
+     * Gets name
+     *
+     * @return string|null
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     *
+     * @param string|null $name The name of the User
+     *
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets surname
+     *
+     * @return string|null
+     */
+    public function getSurname()
+    {
+        return $this->container['surname'];
+    }
+
+    /**
+     * Sets surname
+     *
+     * @param string|null $surname The name of the User
+     *
+     * @return $this
+     */
+    public function setSurname($surname)
+    {
+        $this->container['surname'] = $surname;
 
         return $this;
     }
@@ -329,7 +525,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string|null $email The email associated to the User
+     * @param string|null $email The email address of the User
      *
      * @return $this
      */
@@ -341,193 +537,235 @@ class User implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets first_name
+     * Gets phone
+     *
+     * @return BigDecimal|null
+     */
+    public function getPhone()
+    {
+        return $this->container['phone'];
+    }
+
+    /**
+     * Sets phone
+     *
+     * @param BigDecimal|null $phone The phone number of the User
+     *
+     * @return $this
+     */
+    public function setPhone($phone)
+    {
+        $this->container['phone'] = $phone;
+
+        return $this;
+    }
+
+    /**
+     * Gets role
      *
      * @return string|null
      */
-    public function getFirstName()
+    public function getRole()
     {
-        return $this->container['first_name'];
+        return $this->container['role'];
     }
 
     /**
-     * Sets first_name
+     * Sets role
      *
-     * @param string|null $first_name First name of the User
+     * @param string|null $role The role of the User. The **admin** can create users, as well as DSTs and can sign. The **instructor** can create DSTs and sign. The **signer** can only sign documents.
      *
      * @return $this
      */
-    public function setFirstName($first_name)
+    public function setRole($role)
     {
-        $this->container['first_name'] = $first_name;
+        $allowedValues = $this->getRoleAllowableValues();
+        if (!is_null($role) && !in_array($role, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'role', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['role'] = $role;
 
         return $this;
     }
 
     /**
-     * Gets id
+     * Gets groups
      *
-     * @return string
+     * @return \OpenAPI\Client\Model\UserGroup[]|null
      */
-    public function getId()
+    public function getGroups()
     {
-        return $this->container['id'];
+        return $this->container['groups'];
     }
 
     /**
-     * Sets id
+     * Sets groups
      *
-     * @param string $id The uuid code that identifies the User
+     * @param \OpenAPI\Client\Model\UserGroup[]|null $groups A group of users. This is useful during DSTs creation, it is possible to select a group as signers. This way all the components of that group have to sign the document
      *
      * @return $this
      */
-    public function setId($id)
+    public function setGroups($groups)
     {
-        $this->container['id'] = $id;
+        $this->container['groups'] = $groups;
 
         return $this;
     }
 
     /**
-     * Gets last_name
+     * Gets capabilities
+     *
+     * @return string[]|null
+     */
+    public function getCapabilities()
+    {
+        return $this->container['capabilities'];
+    }
+
+    /**
+     * Sets capabilities
+     *
+     * @param string[]|null $capabilities The capabilities represents the action a user is able to do
+     *
+     * @return $this
+     */
+    public function setCapabilities($capabilities)
+    {
+        $allowedValues = $this->getCapabilitiesAllowableValues();
+        if (!is_null($capabilities) && array_diff($capabilities, $allowedValues)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'capabilities', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['capabilities'] = $capabilities;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_by
      *
      * @return string|null
      */
-    public function getLastName()
+    public function getCreatedBy()
     {
-        return $this->container['last_name'];
+        return $this->container['created_by'];
     }
 
     /**
-     * Sets last_name
+     * Sets created_by
      *
-     * @param string|null $last_name Last name of the User
+     * @param string|null $created_by The one which created the User
      *
      * @return $this
      */
-    public function setLastName($last_name)
+    public function setCreatedBy($created_by)
     {
-        $this->container['last_name'] = $last_name;
+        $this->container['created_by'] = $created_by;
 
         return $this;
     }
 
     /**
-     * Gets owner
+     * Gets created_at
+     *
+     * @return \DateTime|null
+     */
+    public function getCreatedAt()
+    {
+        return $this->container['created_at'];
+    }
+
+    /**
+     * Sets created_at
+     *
+     * @param \DateTime|null $created_at The date of the creation of the User
+     *
+     * @return $this
+     */
+    public function setCreatedAt($created_at)
+    {
+        $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets deleted_at
+     *
+     * @return \DateTime|null
+     */
+    public function getDeletedAt()
+    {
+        return $this->container['deleted_at'];
+    }
+
+    /**
+     * Sets deleted_at
+     *
+     * @param \DateTime|null $deleted_at The date of deletion of the User
+     *
+     * @return $this
+     */
+    public function setDeletedAt($deleted_at)
+    {
+        $this->container['deleted_at'] = $deleted_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets automatic
      *
      * @return bool|null
      */
-    public function getOwner()
+    public function getAutomatic()
     {
-        return $this->container['owner'];
+        return $this->container['automatic'];
     }
 
     /**
-     * Sets owner
+     * Sets automatic
      *
-     * @param bool|null $owner The _owner field_ gives to the User administrative permissions
+     * @param bool|null $automatic If true the user is automatic
      *
      * @return $this
      */
-    public function setOwner($owner)
+    public function setAutomatic($automatic)
     {
-        $this->container['owner'] = $owner;
+        $this->container['automatic'] = $automatic;
 
         return $this;
     }
 
     /**
-     * Gets rao
+     * Gets extra_data
      *
-     * @return bool|null
+     * @return map[string,object]|null
      */
-    public function getRao()
+    public function getExtraData()
     {
-        return $this->container['rao'];
+        return $this->container['extra_data'];
     }
 
     /**
-     * Sets rao
+     * Sets extra_data
      *
-     * @param bool|null $rao The _rao field_ identifies a RAO User, the one can associate identities to the other users
+     * @param map[string,object]|null $extra_data Extra data associated to the User
      *
      * @return $this
      */
-    public function setRao($rao)
+    public function setExtraData($extra_data)
     {
-        $this->container['rao'] = $rao;
-
-        return $this;
-    }
-
-    /**
-     * Gets status
-     *
-     * @return string|null
-     */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-     * Sets status
-     *
-     * @param string|null $status The status of the User
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        $this->container['status'] = $status;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     *
-     * @return string|null
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param string|null $type The _type field_ identifies the permissions the User have
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets wallet
-     *
-     * @return \OpenAPI\Client\Model\Identity[]|null
-     */
-    public function getWallet()
-    {
-        return $this->container['wallet'];
-    }
-
-    /**
-     * Sets wallet
-     *
-     * @param \OpenAPI\Client\Model\Identity[]|null $wallet The wallet of an User identifies its portfolio of identities
-     *
-     * @return $this
-     */
-    public function setWallet($wallet)
-    {
-        $this->container['wallet'] = $wallet;
+        $this->container['extra_data'] = $extra_data;
 
         return $this;
     }
@@ -595,6 +833,16 @@ class User implements ModelInterface, ArrayAccess
             ObjectSerializer::sanitizeForSerialization($this),
             JSON_PRETTY_PRINT
         );
+    }
+
+    /**
+     * Gets a header-safe presentation of the object
+     *
+     * @return string
+     */
+    public function toHeaderValue()
+    {
+        return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 
