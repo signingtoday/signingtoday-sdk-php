@@ -12,12 +12,12 @@
 /**
  * Signing Today API
  *
- * KlNpZ25pbmcgVG9kYXkqIGVuYWJsZXMgc2VhbWxlc3MgaW50ZWdyYXRpb24gb2YgZGlnaXRhbCBzaWduYXR1cmVzIGludG8gYW55CndlYnNpdGUgYnkgdGhlIHVzZSBvZiBlYXN5IHJlcXVlc3RzIHRvIG91ciBBUEkuIFRoaXMgaXMgdGhlIHNtYXJ0IHdheSBvZgphZGRpbmcgZGlnaXRhbCBzaWduYXR1cmUgc3VwcG9ydCB3aXRoIGEgZ3JlYXQgdXNlciBleHBlcmllbmNlLgoKCipTaWduaW5nIFRvZGF5IEFQSXMqIHVzZSBIVFRQIG1ldGhvZHMgYW5kIGFyZSBSRVNUZnVsIGJhc2VkLCBtb3Jlb3ZlciB0aGV5CmFyZSBwcm90ZWN0ZWQgYnkgYSAqc2VydmVyIHRvIHNlcnZlciBhdXRoZW50aWNhdGlvbiogc3RhbmRhcmQgYnkgdGhlIHVzZSBvZgp0b2tlbnMuCgoKKlNpZ25pbmcgVG9kYXkgQVBJcyogY2FuIGJlIHVzZWQgaW4gdGhlc2UgZW52aXJvbm1lbnRzOgoKCnwgRW52aXJvbm1lbnQgfCBEZXNjcmlwdGlvbiB8IEVuZHBvaW50IHwKfCAtLS0tLS0tLS0tLSB8IC0tLS0tLS0tLS0tIHwgLS0tLS0tLS0gfAp8IFNhbmRib3ggICAgIHwgVGVzdCBlbnZpcm9ubWVudCB8IGBodHRwczovL3NhbmRib3guc2lnbmluZ3RvZGF5LmNvbWAgfAp8IExpdmUgICAgICAgIHwgUHJvZHVjdGlvbiBlbnZpcm9ubWVudCB8IGBodHRwczovL2FwaS5zaWduaW5ndG9kYXkuY29tYCB8CgoKRm9yIGV2ZXJ5IHNpbmdsZSByZXF1ZXN0IHRvIFNpZ25pbmcgVG9kYXkgaGFzIHRvIGJlIGRlZmluZWQgdGhlIGZvbGxvd2luZwoqSFRUUCogaGVhZGVyOgotIGBBdXRob3JpemF0aW9uYCwgd2hpY2ggY29udGFpbnMgdGhlIGF1dGhlbnRpY2F0aW9uIHRva2VuLgoKSWYgdGhlIHJlcXVlc3QgaGFzIGEgYm9keSB0aGFuIGFub3RoZXIgKkhUVFAqIGhlYWRlciBpcyByZXF1ZXN0ZWQ6Ci0gYENvbnRlbnQtVHlwZWAsIHdpdGggYGFwcGxpY2F0aW9uL2pzb25gIHZhbHVlLgoKCkZvbGxvd3MgYW4gZXhhbXBsZSBvZiB1c2FnZSB0byBlbnVtZXJhdGUgYWxsIHRoZSB1c2VyIG9mICpteS1vcmcqCm9yZ2FuaXphdGlvbi4KCioqRXhhbXBsZSoqCgpgYGBqc29uCiQgY3VybCBodHRwczovL3NhbmRib3guc2lnbmluZ3RvZGF5LmNvbS9hcGkvdjEvbXktb3JnL3VzZXJzIFwKICAgIC1IICdBdXRob3JpemF0aW9uOiBUb2tlbiA8YWNjZXNzLXRva2VuPicKYGBgCgojIyBIVFRQIG1ldGhvZHMgdXNlZAoKQVBJcyB1c2UgdGhlIHJpZ2h0IEhUVFAgdmVyYiBpbiBldmVyeSBzaXR1YXRpb24uCgp8IE1ldGhvZCAgIHwgRGVzY3JpcHRpb24gICAgICAgICAgICAgICAgICAgIHwKfCAtLS0tLS0tLSB8IC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSB8CnwgYEdFVGAgICAgfCBSZXF1ZXN0IGRhdGEgZnJvbSBhIHJlc291cmNlICAgfAp8IGBQT1NUYCAgIHwgU2VuZCBkYXRhIHRvIGNyZWF0ZSBhIHJlc291cmNlIHwKfCBgUFVUYCAgICB8IFVwZGF0ZSBhIHJlc291cmNlICAgICAgICAgICAgICB8CnwgYFBBVENIYCAgfCBQYXJ0aWFsbHkgdXBkYXRlIGEgcmVzb3VyY2UgICAgfAp8IGBERUxFVEVgIHwgRGVsZXRlIGEgcmVzb3Vyc2UgICAgICAgICAgICAgIHwKCgojIyBSZXNwb25zZSBkZWZpbml0aW9uCgpBbGwgdGhlIHJlc3BvbnNlIGFyZSBpbiBKU09OIGZvcm1hdC4KQXMgcmVzcG9uc2UgdG8gYSByZXF1ZXN0IG9mIGFsbCB1c2VycyBvZiBhbiBvcmdhbml6YXRpb24geW91IHdpbGwgaGF2ZSBhCnJlc3VsdCBsaWtlIHRoaXM6CgpgYGBqc29uCnsKICAgICJwYWdpbmF0aW9uIjogewogICAgICAiY291bnQiOiA3NSwKICAgICAgInByZXZpb3VzIjogImh0dHBzOi8vc2FuZGJveC5zaWduaW5ndG9kYXkuY29tL2FwaS92MS9teS1vcmcvdXNlcnM/cGFnZT0xIiwKICAgICAgIm5leHQiOiAiaHR0cHM6Ly9zYW5kYm94LnNpZ25pbmd0b2RheS5jb20vYXBpL3YxL215LW9yZy91c2Vycz9wYWdlPTMiLAogICAgICAicGFnZXMiOiA4LAogICAgICAicGFnZSI6IDIKICAgIH0sCiAgICAibWV0YSI6IHsKICAgICAgImNvZGUiOiAyMDAKICAgIH0sCiAgICAiZGF0YSI6IFsKICAgICAgewogICAgICAgICJpZCI6ICJqZG8iLAogICAgICAgICJzdGF0dXMiOiAiZW5hYmxlZCIsCiAgICAgICAgInR5cGUiOiAiQmFzaWMgdXNlciBhY2NvdW50IiwKICAgICAgICAiZW1haWwiOiBqb2huZG9lQGR1bW15ZW1haWwuY29tLAogICAgICAgICJmaXJzdF9uYW1lIjogIkpvaG4iLAogICAgICAgICJsYXN0X25hbWUiOiAiRG9lIiwKICAgICAgICAid2FsbGV0IjogW10sCiAgICAgICAgImNyZWF0ZWRfYnkiOiAic3lzdGVtIiwKICAgICAgICAib3duZXIiOiBmYWxzZSwKICAgICAgICAiYXV0b21hdGljIjogZmFsc2UsCiAgICAgICAgInJhbyI6IGZhbHNlCiAgICAgIH0sCiAgICAgIC4uLgogICAgXQogIH0KYGBgCgpUaGUgSlNPTiBvZiB0aGUgcmVzcG9uc2UgaXMgbWFkZSBvZiB0aHJlZSBwYXJ0czoKLSBQYWdpbmF0aW9uCi0gTWV0YQotIERhdGEKCiMjIyBQYWdpbmF0aW9uCgoqUGFnaW5hdGlvbiogb2JqZWN0IGFsbG93cyB0byBzcGxpdCB0aGUgcmVzcG9uc2UgaW50byBwYXJ0cyBhbmQgdGhlbiB0bwpyZWJ1aWxkIGl0IHNlcXVlbnRpYWxseSBieSB0aGUgdXNlIG9mIGBuZXh0YCBhbmQgYHByZXZpb3VzYCBwYXJhbWV0ZXJzLCBieQp3aGljaCB5b3UgZ2V0IHByZXZpb3VzIGFuZCBmb2xsb3dpbmcgYmxvY2tzLiBUaGUgKlBhZ2luYXRpb24qIGlzIHByZXNlbnQKb25seSBpZiB0aGUgcmVzcG9uc2UgaXMgYSBsaXN0IG9mIG9iamVjdHMuCgpUaGUgZ2VuZXJhbCBzdHJ1Y3R1cmUgb2YgKlBhZ2luYXRpb24qIG9iamVjdCBpcyB0aGUgZm9sbG93aW5nOgoKYGBganNvbgp7CiAgICAicGFnaW5hdGlvbiI6IHsKICAgICAgImNvdW50IjogNzUsCiAgICAgICJwcmV2aW91cyI6ICJodHRwczovL3NhbmRib3guc2lnbmluZ3RvZGF5LmNvbS9hcGkvdjEvbXktb3JnL3VzZXJzP3BhZ2U9MSIsCiAgICAgICJuZXh0IjogImh0dHBzOi8vc2FuZGJveC5zaWduaW5ndG9kYXkuY29tL2FwaS92MS9teS1vcmcvdXNlcnM/cGFnZT0zIiwKICAgICAgInBhZ2VzIjogOCwKICAgICAgInBhZ2UiOiAyCiAgICB9LAogICAgLi4uCiAgfQpgYGAKCiMjIyBNZXRhCgoqTWV0YSogb2JqZWN0IGlzIHVzZWQgdG8gZW5yaWNoIHRoZSBpbmZvcm1hdGlvbiBhYm91dCB0aGUgcmVzcG9uc2UuIEluIHRoZQpwcmV2aW91cyBleGFtcGxlLCBhIHN1Y2Nlc3NmdWwgY2FzZSBvZiByZXNwb25zZSwgKk1ldGEqIHdpbGwgaGF2ZSB2YWx1ZQpgc3RhdHVzOiAyWFhgLiBJbiBjYXNlIG9mIHVuc3VjY2Vzc2Z1bCByZXNwb25zZSwgKk1ldGEqIHdpbGwgaGF2ZSBmdXJ0aGVyCmluZm9ybWF0aW9uLCBhcyBmb2xsb3dzOgoKYGBganNvbgp7CiAgICAibWV0YSI6IHsKICAgICAgImNvZGUiOiA8SFRUUCBTVEFUVVMgQ09ERT4sCiAgICAgICJlcnJvcl90eXBlIjogPFNUQVRVUyBDT0RFIERFU0NSSVBUSU9OPiwKICAgICAgImVycm9yX21lc3NhZ2UiOiA8RVJST1IgREVTQ1JJUFRJT04+CiAgICB9CiAgfQpgYGAKCiMjIyBEYXRhCgoqRGF0YSogb2JqZWN0IG91dHB1dHMgYXMgb2JqZWN0IG9yIGxpc3Qgb2YgdGhlbS4gQ29udGFpbnMgdGhlIGV4cGVjdGVkIGRhdGEKYXMgcmVxdWVzdGVkIHRvIHRoZSBBUEkuCgojIyBTZWFyY2ggZmlsdGVycwoKU2VhcmNoIGZpbHRlcnMgb2YgdGhlIEFQSSBoYXZlIHRoZSBmb2xsb3dpbmcgc3RydWN0dXJlOgoKYHdoZXJlX0FUVFJJQlVURU5BTUVgPWBWQUxVRWAKCkluIHRoaXMgd2F5IHlvdSBtYWtlIGEgY2FzZS1zZW5zaXRpdmUgc2VhcmNoIG9mICpWQUxVRSouIFlvdSBjYW4gZXh0ZW5kIGl0CnRocm91Z2ggdGhlIERqYW5nbyBsb29rdXAsIG9idGFpbmluZyBtb3JlIHNwZWNpZmljIGZpbHRlcnMuIEZvciBleGFtcGxlOgoKYHdoZXJlX0FUVFJJQlVURU5BTUVfX0xPT0tVUGA9YFZBTFVFYAoKd2hlcmUgKkxPT0tVUCogY2FuIGJlIHJlcGxhY2VkIHdpdGggYGljb250YWluc2AgdG8gaGF2ZSBhIHBhcnRpYWwgaW5zZW5zaXRpdmUKcmVzZWFyY2gsIHdoZXJlCgpgd2hlcmVfZmlyc3RfbmFtZV9faWNvbnRhaW5zYD1gQ0hhYAoKbWF0Y2hlcyB3aXRoIGV2ZXJ5IHVzZXIgdGhhdCBoYXZlIHRoZSAqY2hhKiBzdHJpbmcgaW4gdGhlaXIgbmFtZSwgd2l0aApubyBkaWZmZXJlbmNlcyBiZXR3ZWVuIGNhcGl0YWwgYW5kIGxvd2VyIGNhc2VzLgoKW0hlcmVdKGh0dHBzOi8vZG9jcy5kamFuZ29wcm9qZWN0LmNvbS9lbi8xLjExL3JlZi9tb2RlbHMvcXVlcnlzZXRzLyNmaWVsZC1sb29rdXBzKQp0aGUgbGlzdCBvZiB0aGUgbG9va3Vwcy4KCiMjIFdlYmhvb2tzCgpTaWduaW5nIFRvZGF5IHN1cHBvcnRzIHdlYmhvb2tzIGZvciB0aGUgdXBkYXRlIG9mIERTVHMgYW5kIGlkZW50aXRpZXMgc3RhdHVzLgpZb3UgY2FuIGNob29zZSBpZiB0byB1c2Ugb3Igbm90IHdlYmhvb2tzIGFuZCBpZiB5b3Ugd2FudCB0byByZWNlaXZlIHVwZGF0ZXMKYWJvdXQgRFNUcyBhbmQvb3IgaWRlbnRpdGllcy4gWW91IGNhbiBjb25maWd1cmF0ZSBpdCBvbiBhcHBsaWNhdGlvbiB0b2tlbgpsZXZlbCwgaW4gdGhlICp3ZWJob29rKiBmaWVsZCwgYXMgZm9sbG93czoKCmBgYGpzb24KIndlYmhvb2tzIjogewogICJkc3QiOiAiVVJMIiwKICAiaWRlbnRpdHkiOiAiVVJMIgogIH0KYGBgCgojIyMgRFNUcyBzdGF0dXMgdXBkYXRlCgpEU1RzIHNlbmQgdGhlIGZvbGxvd2luZyBzdGF0dXMgdXBkYXRlczoKLSAqKkRTVF9TVEFUVVNfQ0hBTkdFRCoqOiB3aGVuZXZlciB0aGUgRFNUIGNoYW5nZXMgaXRzIHN0YXR1cwotICoqU0lHTkFUVVJFX1NUQVRVU19DSEFOR0VEKio6IHdoZW5ldmVyIG9uZSBvZiB0aGUgc2lnbmF0dXJlcyBjaGFuZ2VzIGl0cwpzdGF0dXMKCiMjIyMgRFNUX1NUQVRVU19DSEFOR0VECgpTZW5kcyB0aGUgZm9sbG93aW5nIGluZm9ybWF0aW9uOgoKYGBganNvbgp7CiAgICAibWVzc2FnZSI6ICJEU1RfU1RBVFVTX0NIQU5HRUQiLAogICAgImRhdGEiOiB7CiAgICAgICJzdGF0dXMiOiAiPERTVF9TVEFUVVM+IiwKICAgICAgImRzdCI6ICI8RFNUX0lEPiIsCiAgICAgICJyZWFzb24iOiAiPERTVF9SRUFTT04+IgogICAgfQogIH0KYGBgCgojIyMjIFNJR05BVFVSRV9TVEFUVVNfQ0hBTkdFRAoKU2VuZHMgdGhlIGZvbGxvd2luZyBpbmZvcm1hdGlvbjoKCmBgYGpzb24KewogICAgIm1lc3NhZ2UiOiAiU0lHTkFUVVJFX1NUQVRVU19DSEFOR0VEIiwKICAgICJkYXRhIjogewogICAgICAic3RhdHVzIjogIjxTSUdOQVRVUkVfU1RBVFVTPiIsCiAgICAgICJncm91cCI6IDxNRU1CRVJTSElQX0dST1VQX0lOREVYPiwKICAgICAgImRzdCI6IHsKICAgICAgICAiaWQiOiAiPERTVF9JRD4iLAogICAgICAgICJ0aXRsZSI6ICI8RFNUX1RJVExFPiIKICAgICAgfSwKICAgICAgInNpZ25hdHVyZSI6ICI8U0lHTkFUVVJFX0lEPiIsCiAgICAgICJzaWduZXIiOiAiPFNJR05FUl9VU0VSTkFNRT4iLAogICAgICAicG9zaXRpb24iOiAiPFNJR05BVFVSRV9QT1NJVElPTj4iLAogICAgICAiZG9jdW1lbnQiOiB7CiAgICAgICAgImRpc3BsYXlfbmFtZSI6ICI8RE9DVU1FTlRfVElUTEU+IiwKICAgICAgICAiaWQiOiAiPERPQ1VNRU5UX0lEPiIsCiAgICAgICAgIm9yZGVyIjogPERPQ1VNRU5UX0lOREVYPgogICAgICB9LAogICAgICAiYXV0b21hdGljIjogPERFQ0xBUkVTX0lGX1RIRV9TSUdORVJfSVNfQVVUT01BVElDPiwKICAgICAgInBhZ2UiOiAiPFNJR05BVFVSRV9QQUdFPiIKICAgIH0KICB9CmBgYAoKIyMjIElkZW50aXRpZXMgc3RhdHVzIHVwZGF0ZQoKSWRlbnRpdGllcyBzZW5kIHRoZSBmb2xsb3dpbmcgc3RhdHVzIHVwZGF0ZXM6Ci0gKipJREVOVElUWV9SRVFVRVNUX0VOUk9MTEVEKio6IHdoZW5ldmVyIGFuIGlkZW50aXR5IHJlcXVlc3QgaXMgYWN0aXZhdGVkCgojIyMjIElERU5USVRZX1JFUVVFU1RfRU5ST0xMRUQKClNlbmRzIHRoZSBmb2xsb3dpbmcgaW5mb3JtYXRpb246CgpgYGBqc29uCnsKICAgICJtZXNzYWdlIjogIklERU5USVRZX1JFUVVFU1RfRU5ST0xMRUQiLAogICAgImRhdGEiOiB7CiAgICAgICJzdGF0dXMiOiAiPFJFUVVFU1RfU1RBVFVTPiIsCiAgICAgICJyZXF1ZXN0IjogIjxSRVFVRVNUX0lEPiIsCiAgICAgICJ1c2VyIjogIjxBUFBMSUNBTlRfVVNFUk5BTUU+IgogICAgfQogIH0KYGBgCgojIyMgVXJsYmFjawoKU29tZXRpbWVzIG1heSBiZSBuZWNlc3NhcnkgdG8gbWFrZSBhIHJlZGlyZWN0IGFmdGVyIGFuIHVzZXIsIGZyb20gdGhlCnNpZ25hdHVyZSB0cmF5LCBoYXMgY29tcGxldGVkIGhpcyBvcGVyYXRpb25zIG9yIGFjdGl2YXRlZCBhIGNlcnRpZmljYXRlLgoKSWYgc2V0LCByZWRpcmVjdHMgY291bGQgaGFwcGVuIGluIDMgY2FzZXM6Ci0gYWZ0ZXIgYSBzaWduYXR1cmUgb3IgZGVjbGluZQotIGFmdGVyIGEgRFNUIGhhcyBiZWVuIHNpZ25lZCBieSBhbGwgdGhlIHNpZ25lcnMgb3IgY2FuY2VsZWQKLSBhZnRlciB0aGUgYWN0aXZhdGlvbiBvZiBhIGNlcnRpZmljYXRlCgpJbiB0aGUgZmlyc3QgdHdvIGNhc2VzIHRoZSB1cmxiYWNrIHJldHVybnMgdGhlIGZvbGxvd2luZyBpbmZvcm1hdGlvbiB0aHJvdWdoCmEgZGF0YSBmb3JtOgotICoqZHN0LWlkKio6IGlkIG9mIHRoZSBEU1QKLSAqKmRzdC11cmwqKjogc2lnbmF0dXJlX3RpY2tldCBvZiB0aGUgc2lnbmF0dXJlCi0gKipkc3Qtc3RhdHVzKio6IGN1cnJlbnQgc3RhdHVzIG9mIHRoZSBEU1QKLSAqKmRzdC1zaWduYXR1cmUtaWQqKjogaWQgb2YgdGhlIHNpZ25hdHVyZQotICoqZHN0LXNpZ25hdHVyZS1zdGF0dXMqKjogY3VycmVudCBzdGF0dXMgb2YgdGhlIHNpZ25hdHVyZQotICoqdXNlcioqOiB1c2VybmFtZSBvZiB0aGUgc2lnbmVyCi0gKipkZWNsaW5lLXJlYXNvbioqOiBpbiBjYXNlIG9mIGEgcmVmdXNlZCBEU1QgY29udGFpbnMgdGhlIHJlYXNvbiBvZiB0aGUKZGVjbGluZQoKSW4gdGhlIGxhc3QgY2FzZSB0aGUgdXJsYmFjayByZXR1cm5zIHRoZSBmb2xsb3dpbmcgaW5mb3JtYXRpb24gdGhyb3VnaCBhCmRhdGEgZm9ybToKLSAqKnVzZXIqKjogdXNlcm5hbWUgb2YgdGhlIHVzZXIgYWN0aXZhdGVkIHRoZSBjZXJ0aWZpY2F0ZQotICoqaWRlbnRpdHktcHJvdmlkZXIqKjogdGhlIHByb3ZpZGVyIGhhcyBiZWVuIHVzZWQgdG8gaXNzdWUgdGhlIGNlcnRpZmljYXRlCi0gKippZGVudGl0eS1yZXF1ZXN0LWlkKio6IGlkIG9mIHRoZSBlbnJvbGxtZW50IHJlcXVlc3QKLSAqKmlkZW50aXR5LWlkKio6IGlkIG9mIHRoZSBuZXcgaWRlbnRpdHkKLSAqKmlkZW50aXR5LWxhYmVsKio6IHRoZSBsYWJlbCBhc3NpZ25lZCB0byB0aGUgaWRlbnRpdHkKLSAqKmlkZW50aXR5LWNlcnRpZmljYXRlKio6IHB1YmxpYyBrZXkgb2YgdGhlIGNlcnRpZmljYXRlCgoK
+ * *Signing Today* enables seamless integration of digital signatures into any website by the use of easy requests to our API. This is the smart way of adding digital signature support with a great user experience.   *Signing Today APIs* use HTTP methods and are RESTful based, moreover they are protected by a *server to server authentication* standard by the use of tokens.   *Signing Today APIs* can be used in these environments:   | Environment | Description | Endpoint | | ----------- | ----------- | -------- | | Sandbox     | Test environment | `https://sandbox.signingtoday.com` | | Live        | Production environment | `https://api.signingtoday.com` |   For every single request to Signing Today has to be defined the following *HTTP* header: - `Authorization`, which contains the authentication token.  If the request has a body than another *HTTP* header is requested: - `Content-Type`, with `application/json` value.   Follows an example of usage to enumerate all the user of *my-org* organization.  **Example**  ```json $ curl https://sandbox.signingtoday.com/api/v1/my-org/users \\     -H 'Authorization: Token <access-token>' ```  ## HTTP methods used  APIs use the right HTTP verb in every situation.  | Method   | Description                    | | -------- | ------------------------------ | | `GET`    | Request data from a resource   | | `POST`   | Send data to create a resource | | `PUT`    | Update a resource              | | `PATCH`  | Partially update a resource    | | `DELETE` | Delete a resourse              |   ## Response definition  All the response are in JSON format. As response to a request of all users of an organization you will have a result like this:  ```json {     \"pagination\": {       \"count\": 75,       \"previous\": \"https://sandbox.signingtoday.com/api/v1/my-org/users?page=1\",       \"next\": \"https://sandbox.signingtoday.com/api/v1/my-org/users?page=3\",       \"pages\": 8,       \"page\": 2     },     \"meta\": {       \"code\": 200     },     \"data\": [       {         \"id\": \"jdo\",         \"status\": \"enabled\",         \"type\": \"Basic user account\",         \"email\": johndoe@dummyemail.com,         \"first_name\": \"John\",         \"last_name\": \"Doe\",         \"wallet\": [],         \"created_by\": \"system\",         \"owner\": false,         \"automatic\": false,         \"rao\": false       },       ...     ]   } ```  The JSON of the response is made of three parts: - Pagination - Meta - Data  ### Pagination  *Pagination* object allows to split the response into parts and then to rebuild it sequentially by the use of `next` and `previous` parameters, by which you get previous and following blocks. The *Pagination* is present only if the response is a list of objects.  The general structure of *Pagination* object is the following:  ```json {     \"pagination\": {       \"count\": 75,       \"previous\": \"https://sandbox.signingtoday.com/api/v1/my-org/users?page=1\",       \"next\": \"https://sandbox.signingtoday.com/api/v1/my-org/users?page=3\",       \"pages\": 8,       \"page\": 2     },     ...   } ```  ### Meta  *Meta* object is used to enrich the information about the response. In the previous example, a successful case of response, *Meta* will have value `status: 2XX`. In case of unsuccessful response, *Meta* will have further information, as follows:  ```json {     \"meta\": {       \"code\": <HTTP STATUS CODE>,       \"error_type\": <STATUS CODE DESCRIPTION>,       \"error_message\": <ERROR DESCRIPTION>     }   } ```  ### Data  *Data* object outputs as object or list of them. Contains the expected data as requested to the API.  ## Search filters  Search filters of the API have the following structure:  `where_ATTRIBUTENAME`=`VALUE`  In this way you make a case-sensitive search of *VALUE*. You can extend it through the Django lookup, obtaining more specific filters. For example:  `where_ATTRIBUTENAME__LOOKUP`=`VALUE`  where *LOOKUP* can be replaced with `icontains` to have a partial insensitive research, where  `where_first_name__icontains`=`CHa`  matches with every user that have the *cha* string in their name, with no differences between capital and lower cases.  [Here](https://docs.djangoproject.com/en/1.11/ref/models/querysets/#field-lookups) the list of the lookups.  ## Webhooks  Signing Today supports webhooks for the update of DSTs and identities status. You can choose if to use or not webhooks and if you want to receive updates about DSTs and/or identities. You can configurate it on application token level, in the *webhook* field, as follows:  ```json \"webhooks\": {   \"dst\": \"URL\",   \"identity\": \"URL\"   } ```  ### DSTs status update  DSTs send the following status updates: - **DST_STATUS_CHANGED**: whenever the DST changes its status - **SIGNATURE_STATUS_CHANGED**: whenever one of the signatures changes its status  #### DST_STATUS_CHANGED  Sends the following information:  ```json {     \"message\": \"DST_STATUS_CHANGED\",     \"data\": {       \"status\": \"<DST_STATUS>\",       \"dst\": \"<DST_ID>\",       \"reason\": \"<DST_REASON>\"     }   } ```  #### SIGNATURE_STATUS_CHANGED  Sends the following information:  ```json {     \"message\": \"SIGNATURE_STATUS_CHANGED\",     \"data\": {       \"status\": \"<SIGNATURE_STATUS>\",       \"group\": <MEMBERSHIP_GROUP_INDEX>,       \"dst\": {         \"id\": \"<DST_ID>\",         \"title\": \"<DST_TITLE>\"       },       \"signature\": \"<SIGNATURE_ID>\",       \"signer\": \"<SIGNER_USERNAME>\",       \"position\": \"<SIGNATURE_POSITION>\",       \"document\": {         \"display_name\": \"<DOCUMENT_TITLE>\",         \"id\": \"<DOCUMENT_ID>\",         \"order\": <DOCUMENT_INDEX>       },       \"automatic\": <DECLARES_IF_THE_SIGNER_IS_AUTOMATIC>,       \"page\": \"<SIGNATURE_PAGE>\"     }   } ```  ### Identities status update  Identities send the following status updates: - **IDENTITY_REQUEST_ENROLLED**: whenever an identity request is activated  #### IDENTITY_REQUEST_ENROLLED  Sends the following information:  ```json {     \"message\": \"IDENTITY_REQUEST_ENROLLED\",     \"data\": {       \"status\": \"<REQUEST_STATUS>\",       \"request\": \"<REQUEST_ID>\",       \"user\": \"<APPLICANT_USERNAME>\"     }   } ```  ### Urlback  Sometimes may be necessary to make a redirect after an user, from the signature tray, has completed his operations or activated a certificate.  If set, redirects could happen in 3 cases: - after a signature or decline - after a DST has been signed by all the signers or canceled - after the activation of a certificate  In the first two cases the urlback returns the following information through a data form: - **dst-id**: id of the DST - **dst-url**: signature_ticket of the signature - **dst-status**: current status of the DST - **dst-signature-id**: id of the signature - **dst-signature-status**: current status of the signature - **user**: username of the signer - **decline-reason**: in case of a refused DST contains the reason of the decline  In the last case the urlback returns the following information through a data form: - **user**: username of the user activated the certificate - **identity-provider**: the provider has been used to issue the certificate - **identity-request-id**: id of the enrollment request - **identity-id**: id of the new identity - **identity-label**: the label assigned to the identity - **identity-certificate**: public key of the certificate
  *
  * The version of the OpenAPI document: 1.5.0
  * Contact: smartcloud@bit4id.com
  * Generated by: https://openapi-generator.tech
- * OpenAPI Generator version: 4.1.0
+ * OpenAPI Generator version: 4.2.3
  */
 
 /**
@@ -126,7 +126,7 @@ class Bit4idPathgroupIdentitiesApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\InlineResponse2004|\OpenAPI\Client\Model\InlineResponse404|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404
+     * @return \OpenAPI\Client\Model\InlineResponse2011|\OpenAPI\Client\Model\InlineResponse404|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404
      */
     public function associateAppearance($organization_id, $identity_id, $inline_object)
     {
@@ -145,7 +145,7 @@ class Bit4idPathgroupIdentitiesApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\InlineResponse2004|\OpenAPI\Client\Model\InlineResponse404|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\InlineResponse2011|\OpenAPI\Client\Model\InlineResponse404|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404, HTTP status code, HTTP response headers (array of strings)
      */
     public function associateAppearanceWithHttpInfo($organization_id, $identity_id, $inline_object)
     {
@@ -160,7 +160,7 @@ class Bit4idPathgroupIdentitiesApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -182,14 +182,14 @@ class Bit4idPathgroupIdentitiesApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\InlineResponse2004' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\InlineResponse2011' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse2004', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse2011', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -197,7 +197,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse404' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -209,7 +209,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse401' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -221,7 +221,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse403' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -233,7 +233,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse404' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -243,12 +243,12 @@ class Bit4idPathgroupIdentitiesApi
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\InlineResponse2004';
+            $returnType = '\OpenAPI\Client\Model\InlineResponse2011';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
             }
 
             return [
@@ -262,7 +262,7 @@ class Bit4idPathgroupIdentitiesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineResponse2004',
+                        '\OpenAPI\Client\Model\InlineResponse2011',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -340,7 +340,7 @@ class Bit4idPathgroupIdentitiesApi
      */
     public function associateAppearanceAsyncWithHttpInfo($organization_id, $identity_id, $inline_object)
     {
-        $returnType = '\OpenAPI\Client\Model\InlineResponse2004';
+        $returnType = '\OpenAPI\Client\Model\InlineResponse2011';
         $request = $this->associateAppearanceRequest($organization_id, $identity_id, $inline_object);
 
         return $this->client
@@ -351,7 +351,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -516,7 +516,7 @@ class Bit4idPathgroupIdentitiesApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\InlineResponse2004|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404
+     * @return \OpenAPI\Client\Model\InlineResponse2011|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404
      */
     public function associateIdentity($organization_id, $user_id, $identity_association)
     {
@@ -535,7 +535,7 @@ class Bit4idPathgroupIdentitiesApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\InlineResponse2004|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\InlineResponse2011|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404, HTTP status code, HTTP response headers (array of strings)
      */
     public function associateIdentityWithHttpInfo($organization_id, $user_id, $identity_association)
     {
@@ -550,7 +550,7 @@ class Bit4idPathgroupIdentitiesApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -572,14 +572,14 @@ class Bit4idPathgroupIdentitiesApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\InlineResponse2004' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\InlineResponse2011' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse2004', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse2011', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -587,7 +587,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse401' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -599,7 +599,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse403' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -611,7 +611,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse404' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -621,12 +621,12 @@ class Bit4idPathgroupIdentitiesApi
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\InlineResponse2004';
+            $returnType = '\OpenAPI\Client\Model\InlineResponse2011';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
             }
 
             return [
@@ -640,7 +640,7 @@ class Bit4idPathgroupIdentitiesApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineResponse2004',
+                        '\OpenAPI\Client\Model\InlineResponse2011',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -710,7 +710,7 @@ class Bit4idPathgroupIdentitiesApi
      */
     public function associateIdentityAsyncWithHttpInfo($organization_id, $user_id, $identity_association)
     {
-        $returnType = '\OpenAPI\Client\Model\InlineResponse2004';
+        $returnType = '\OpenAPI\Client\Model\InlineResponse2011';
         $request = $this->associateIdentityRequest($organization_id, $user_id, $identity_association);
 
         return $this->client
@@ -721,7 +721,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -918,7 +918,7 @@ class Bit4idPathgroupIdentitiesApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -943,7 +943,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse2012' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -955,7 +955,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse401' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -967,7 +967,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse403' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -982,7 +982,7 @@ class Bit4idPathgroupIdentitiesApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
             }
 
             return [
@@ -1067,7 +1067,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -1216,7 +1216,7 @@ class Bit4idPathgroupIdentitiesApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\InlineResponse2004|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404
+     * @return \OpenAPI\Client\Model\InlineResponse2011|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404
      */
     public function deleteAppearance($organization_id, $identity_id)
     {
@@ -1234,7 +1234,7 @@ class Bit4idPathgroupIdentitiesApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\InlineResponse2004|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\InlineResponse2011|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteAppearanceWithHttpInfo($organization_id, $identity_id)
     {
@@ -1249,7 +1249,7 @@ class Bit4idPathgroupIdentitiesApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -1271,14 +1271,14 @@ class Bit4idPathgroupIdentitiesApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\InlineResponse2004' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\InlineResponse2011' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse2004', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse2011', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1286,7 +1286,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse401' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -1298,7 +1298,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse403' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -1310,7 +1310,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse404' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -1320,12 +1320,12 @@ class Bit4idPathgroupIdentitiesApi
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\InlineResponse2004';
+            $returnType = '\OpenAPI\Client\Model\InlineResponse2011';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
             }
 
             return [
@@ -1339,7 +1339,7 @@ class Bit4idPathgroupIdentitiesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineResponse2004',
+                        '\OpenAPI\Client\Model\InlineResponse2011',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1407,7 +1407,7 @@ class Bit4idPathgroupIdentitiesApi
      */
     public function deleteAppearanceAsyncWithHttpInfo($organization_id, $identity_id)
     {
-        $returnType = '\OpenAPI\Client\Model\InlineResponse2004';
+        $returnType = '\OpenAPI\Client\Model\InlineResponse2011';
         $request = $this->deleteAppearanceRequest($organization_id, $identity_id);
 
         return $this->client
@@ -1418,7 +1418,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -1605,7 +1605,7 @@ class Bit4idPathgroupIdentitiesApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -1630,7 +1630,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse2012' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -1642,7 +1642,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse401' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -1654,7 +1654,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse403' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -1666,7 +1666,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse404' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -1681,7 +1681,7 @@ class Bit4idPathgroupIdentitiesApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
             }
 
             return [
@@ -1774,7 +1774,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -1928,7 +1928,7 @@ class Bit4idPathgroupIdentitiesApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\InlineResponse2003|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404
+     * @return \OpenAPI\Client\Model\InlineResponse2006|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404
      */
     public function deleteIdentity($organization_id, $identity_id)
     {
@@ -1946,7 +1946,7 @@ class Bit4idPathgroupIdentitiesApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\InlineResponse2003|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\InlineResponse2006|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteIdentityWithHttpInfo($organization_id, $identity_id)
     {
@@ -1961,7 +1961,7 @@ class Bit4idPathgroupIdentitiesApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -1983,14 +1983,14 @@ class Bit4idPathgroupIdentitiesApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\InlineResponse2003' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\InlineResponse2006' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse2003', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse2006', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1998,7 +1998,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse401' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -2010,7 +2010,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse403' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -2022,7 +2022,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse404' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -2032,12 +2032,12 @@ class Bit4idPathgroupIdentitiesApi
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\InlineResponse2003';
+            $returnType = '\OpenAPI\Client\Model\InlineResponse2006';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
             }
 
             return [
@@ -2051,7 +2051,7 @@ class Bit4idPathgroupIdentitiesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineResponse2003',
+                        '\OpenAPI\Client\Model\InlineResponse2006',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2119,7 +2119,7 @@ class Bit4idPathgroupIdentitiesApi
      */
     public function deleteIdentityAsyncWithHttpInfo($organization_id, $identity_id)
     {
-        $returnType = '\OpenAPI\Client\Model\InlineResponse2003';
+        $returnType = '\OpenAPI\Client\Model\InlineResponse2006';
         $request = $this->deleteIdentityRequest($organization_id, $identity_id);
 
         return $this->client
@@ -2130,7 +2130,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -2284,7 +2284,7 @@ class Bit4idPathgroupIdentitiesApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\InlineResponse2011|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404
+     * @return \OpenAPI\Client\Model\InlineResponse2007|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404
      */
     public function getEnrollmentRequest($organization_id, $enrollment_id)
     {
@@ -2302,7 +2302,7 @@ class Bit4idPathgroupIdentitiesApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\InlineResponse2011|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\InlineResponse2007|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEnrollmentRequestWithHttpInfo($organization_id, $enrollment_id)
     {
@@ -2317,7 +2317,7 @@ class Bit4idPathgroupIdentitiesApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -2339,14 +2339,14 @@ class Bit4idPathgroupIdentitiesApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\InlineResponse2011' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\InlineResponse2007' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse2011', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse2007', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2354,7 +2354,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse401' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -2366,7 +2366,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse403' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -2378,7 +2378,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse404' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -2388,12 +2388,12 @@ class Bit4idPathgroupIdentitiesApi
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\InlineResponse2011';
+            $returnType = '\OpenAPI\Client\Model\InlineResponse2007';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
             }
 
             return [
@@ -2407,7 +2407,7 @@ class Bit4idPathgroupIdentitiesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineResponse2011',
+                        '\OpenAPI\Client\Model\InlineResponse2007',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2475,7 +2475,7 @@ class Bit4idPathgroupIdentitiesApi
      */
     public function getEnrollmentRequestAsyncWithHttpInfo($organization_id, $enrollment_id)
     {
-        $returnType = '\OpenAPI\Client\Model\InlineResponse2011';
+        $returnType = '\OpenAPI\Client\Model\InlineResponse2007';
         $request = $this->getEnrollmentRequestRequest($organization_id, $enrollment_id);
 
         return $this->client
@@ -2486,7 +2486,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -2637,14 +2637,15 @@ class Bit4idPathgroupIdentitiesApi
      *
      * @param  string $organization_id The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization (required)
      * @param  \OpenAPI\Client\Model\Id $identity_id The **identity-id** is the uuid code that identifies an identity in the wallet of an user. It is, as well, used to restrict the requested operation to the scope of that identity (required)
+     * @param  string $where_order The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \&quot;**-**\&quot; in front of the value indicates descending order), then the second value and so on (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\InlineResponse2002|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404
+     * @return \OpenAPI\Client\Model\InlineResponse2005|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404
      */
-    public function getIdentity($organization_id, $identity_id)
+    public function getIdentity($organization_id, $identity_id, $where_order = null)
     {
-        list($response) = $this->getIdentityWithHttpInfo($organization_id, $identity_id);
+        list($response) = $this->getIdentityWithHttpInfo($organization_id, $identity_id, $where_order);
         return $response;
     }
 
@@ -2655,14 +2656,15 @@ class Bit4idPathgroupIdentitiesApi
      *
      * @param  string $organization_id The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization (required)
      * @param  \OpenAPI\Client\Model\Id $identity_id The **identity-id** is the uuid code that identifies an identity in the wallet of an user. It is, as well, used to restrict the requested operation to the scope of that identity (required)
+     * @param  string $where_order The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \&quot;**-**\&quot; in front of the value indicates descending order), then the second value and so on (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\InlineResponse2002|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\InlineResponse2005|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getIdentityWithHttpInfo($organization_id, $identity_id)
+    public function getIdentityWithHttpInfo($organization_id, $identity_id, $where_order = null)
     {
-        $request = $this->getIdentityRequest($organization_id, $identity_id);
+        $request = $this->getIdentityRequest($organization_id, $identity_id, $where_order);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2673,7 +2675,7 @@ class Bit4idPathgroupIdentitiesApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -2695,14 +2697,14 @@ class Bit4idPathgroupIdentitiesApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\InlineResponse2002' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\InlineResponse2005' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse2002', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse2005', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2710,7 +2712,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse401' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -2722,7 +2724,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse403' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -2734,7 +2736,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse404' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -2744,12 +2746,12 @@ class Bit4idPathgroupIdentitiesApi
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\InlineResponse2002';
+            $returnType = '\OpenAPI\Client\Model\InlineResponse2005';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
             }
 
             return [
@@ -2763,7 +2765,7 @@ class Bit4idPathgroupIdentitiesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineResponse2002',
+                        '\OpenAPI\Client\Model\InlineResponse2005',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2804,13 +2806,14 @@ class Bit4idPathgroupIdentitiesApi
      *
      * @param  string $organization_id The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization (required)
      * @param  \OpenAPI\Client\Model\Id $identity_id The **identity-id** is the uuid code that identifies an identity in the wallet of an user. It is, as well, used to restrict the requested operation to the scope of that identity (required)
+     * @param  string $where_order The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \&quot;**-**\&quot; in front of the value indicates descending order), then the second value and so on (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getIdentityAsync($organization_id, $identity_id)
+    public function getIdentityAsync($organization_id, $identity_id, $where_order = null)
     {
-        return $this->getIdentityAsyncWithHttpInfo($organization_id, $identity_id)
+        return $this->getIdentityAsyncWithHttpInfo($organization_id, $identity_id, $where_order)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2825,14 +2828,15 @@ class Bit4idPathgroupIdentitiesApi
      *
      * @param  string $organization_id The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization (required)
      * @param  \OpenAPI\Client\Model\Id $identity_id The **identity-id** is the uuid code that identifies an identity in the wallet of an user. It is, as well, used to restrict the requested operation to the scope of that identity (required)
+     * @param  string $where_order The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \&quot;**-**\&quot; in front of the value indicates descending order), then the second value and so on (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getIdentityAsyncWithHttpInfo($organization_id, $identity_id)
+    public function getIdentityAsyncWithHttpInfo($organization_id, $identity_id, $where_order = null)
     {
-        $returnType = '\OpenAPI\Client\Model\InlineResponse2002';
-        $request = $this->getIdentityRequest($organization_id, $identity_id);
+        $returnType = '\OpenAPI\Client\Model\InlineResponse2005';
+        $request = $this->getIdentityRequest($organization_id, $identity_id, $where_order);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2842,7 +2846,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -2873,11 +2877,12 @@ class Bit4idPathgroupIdentitiesApi
      *
      * @param  string $organization_id The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization (required)
      * @param  \OpenAPI\Client\Model\Id $identity_id The **identity-id** is the uuid code that identifies an identity in the wallet of an user. It is, as well, used to restrict the requested operation to the scope of that identity (required)
+     * @param  string $where_order The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \&quot;**-**\&quot; in front of the value indicates descending order), then the second value and so on (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getIdentityRequest($organization_id, $identity_id)
+    protected function getIdentityRequest($organization_id, $identity_id, $where_order = null)
     {
         // verify the required parameter 'organization_id' is set
         if ($organization_id === null || (is_array($organization_id) && count($organization_id) === 0)) {
@@ -2899,6 +2904,10 @@ class Bit4idPathgroupIdentitiesApi
         $httpBody = '';
         $multipart = false;
 
+        // query params
+        if ($where_order !== null) {
+            $queryParams['where_order'] = ObjectSerializer::toQueryValue($where_order);
+        }
 
         // path params
         if ($organization_id !== null) {
@@ -3000,14 +3009,15 @@ class Bit4idPathgroupIdentitiesApi
      * @param  string $where_fiscal_code Returns the identity requests have the specified fiscal code (optional)
      * @param  int $page Restricts the search to the chosen page (optional)
      * @param  int $count Sets the number of users per page to display (optional, default to 100)
+     * @param  string $where_order The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \&quot;**-**\&quot; in front of the value indicates descending order), then the second value and so on (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\InlineResponse2005|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404
+     * @return \OpenAPI\Client\Model\InlineResponse2003|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404
      */
-    public function listEnrollmentRequests($organization_id, $where_provider = null, $where_user = null, $where_first_name = null, $where_last_name = null, $where_registered_by = null, $where_fiscal_code = null, $page = null, $count = 100)
+    public function listEnrollmentRequests($organization_id, $where_provider = null, $where_user = null, $where_first_name = null, $where_last_name = null, $where_registered_by = null, $where_fiscal_code = null, $page = null, $count = 100, $where_order = null)
     {
-        list($response) = $this->listEnrollmentRequestsWithHttpInfo($organization_id, $where_provider, $where_user, $where_first_name, $where_last_name, $where_registered_by, $where_fiscal_code, $page, $count);
+        list($response) = $this->listEnrollmentRequestsWithHttpInfo($organization_id, $where_provider, $where_user, $where_first_name, $where_last_name, $where_registered_by, $where_fiscal_code, $page, $count, $where_order);
         return $response;
     }
 
@@ -3025,14 +3035,15 @@ class Bit4idPathgroupIdentitiesApi
      * @param  string $where_fiscal_code Returns the identity requests have the specified fiscal code (optional)
      * @param  int $page Restricts the search to the chosen page (optional)
      * @param  int $count Sets the number of users per page to display (optional, default to 100)
+     * @param  string $where_order The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \&quot;**-**\&quot; in front of the value indicates descending order), then the second value and so on (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\InlineResponse2005|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\InlineResponse2003|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listEnrollmentRequestsWithHttpInfo($organization_id, $where_provider = null, $where_user = null, $where_first_name = null, $where_last_name = null, $where_registered_by = null, $where_fiscal_code = null, $page = null, $count = 100)
+    public function listEnrollmentRequestsWithHttpInfo($organization_id, $where_provider = null, $where_user = null, $where_first_name = null, $where_last_name = null, $where_registered_by = null, $where_fiscal_code = null, $page = null, $count = 100, $where_order = null)
     {
-        $request = $this->listEnrollmentRequestsRequest($organization_id, $where_provider, $where_user, $where_first_name, $where_last_name, $where_registered_by, $where_fiscal_code, $page, $count);
+        $request = $this->listEnrollmentRequestsRequest($organization_id, $where_provider, $where_user, $where_first_name, $where_last_name, $where_registered_by, $where_fiscal_code, $page, $count, $where_order);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3043,7 +3054,7 @@ class Bit4idPathgroupIdentitiesApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -3065,14 +3076,14 @@ class Bit4idPathgroupIdentitiesApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\InlineResponse2005' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\InlineResponse2003' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse2005', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse2003', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3080,7 +3091,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse401' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -3092,7 +3103,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse403' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -3104,7 +3115,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse404' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -3114,12 +3125,12 @@ class Bit4idPathgroupIdentitiesApi
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\InlineResponse2005';
+            $returnType = '\OpenAPI\Client\Model\InlineResponse2003';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
             }
 
             return [
@@ -3133,7 +3144,7 @@ class Bit4idPathgroupIdentitiesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineResponse2005',
+                        '\OpenAPI\Client\Model\InlineResponse2003',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3181,13 +3192,14 @@ class Bit4idPathgroupIdentitiesApi
      * @param  string $where_fiscal_code Returns the identity requests have the specified fiscal code (optional)
      * @param  int $page Restricts the search to the chosen page (optional)
      * @param  int $count Sets the number of users per page to display (optional, default to 100)
+     * @param  string $where_order The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \&quot;**-**\&quot; in front of the value indicates descending order), then the second value and so on (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listEnrollmentRequestsAsync($organization_id, $where_provider = null, $where_user = null, $where_first_name = null, $where_last_name = null, $where_registered_by = null, $where_fiscal_code = null, $page = null, $count = 100)
+    public function listEnrollmentRequestsAsync($organization_id, $where_provider = null, $where_user = null, $where_first_name = null, $where_last_name = null, $where_registered_by = null, $where_fiscal_code = null, $page = null, $count = 100, $where_order = null)
     {
-        return $this->listEnrollmentRequestsAsyncWithHttpInfo($organization_id, $where_provider, $where_user, $where_first_name, $where_last_name, $where_registered_by, $where_fiscal_code, $page, $count)
+        return $this->listEnrollmentRequestsAsyncWithHttpInfo($organization_id, $where_provider, $where_user, $where_first_name, $where_last_name, $where_registered_by, $where_fiscal_code, $page, $count, $where_order)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3209,14 +3221,15 @@ class Bit4idPathgroupIdentitiesApi
      * @param  string $where_fiscal_code Returns the identity requests have the specified fiscal code (optional)
      * @param  int $page Restricts the search to the chosen page (optional)
      * @param  int $count Sets the number of users per page to display (optional, default to 100)
+     * @param  string $where_order The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \&quot;**-**\&quot; in front of the value indicates descending order), then the second value and so on (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listEnrollmentRequestsAsyncWithHttpInfo($organization_id, $where_provider = null, $where_user = null, $where_first_name = null, $where_last_name = null, $where_registered_by = null, $where_fiscal_code = null, $page = null, $count = 100)
+    public function listEnrollmentRequestsAsyncWithHttpInfo($organization_id, $where_provider = null, $where_user = null, $where_first_name = null, $where_last_name = null, $where_registered_by = null, $where_fiscal_code = null, $page = null, $count = 100, $where_order = null)
     {
-        $returnType = '\OpenAPI\Client\Model\InlineResponse2005';
-        $request = $this->listEnrollmentRequestsRequest($organization_id, $where_provider, $where_user, $where_first_name, $where_last_name, $where_registered_by, $where_fiscal_code, $page, $count);
+        $returnType = '\OpenAPI\Client\Model\InlineResponse2003';
+        $request = $this->listEnrollmentRequestsRequest($organization_id, $where_provider, $where_user, $where_first_name, $where_last_name, $where_registered_by, $where_fiscal_code, $page, $count, $where_order);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3226,7 +3239,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -3264,11 +3277,12 @@ class Bit4idPathgroupIdentitiesApi
      * @param  string $where_fiscal_code Returns the identity requests have the specified fiscal code (optional)
      * @param  int $page Restricts the search to the chosen page (optional)
      * @param  int $count Sets the number of users per page to display (optional, default to 100)
+     * @param  string $where_order The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \&quot;**-**\&quot; in front of the value indicates descending order), then the second value and so on (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function listEnrollmentRequestsRequest($organization_id, $where_provider = null, $where_user = null, $where_first_name = null, $where_last_name = null, $where_registered_by = null, $where_fiscal_code = null, $page = null, $count = 100)
+    protected function listEnrollmentRequestsRequest($organization_id, $where_provider = null, $where_user = null, $where_first_name = null, $where_last_name = null, $where_registered_by = null, $where_fiscal_code = null, $page = null, $count = 100, $where_order = null)
     {
         // verify the required parameter 'organization_id' is set
         if ($organization_id === null || (is_array($organization_id) && count($organization_id) === 0)) {
@@ -3322,6 +3336,10 @@ class Bit4idPathgroupIdentitiesApi
         // query params
         if ($count !== null) {
             $queryParams['count'] = ObjectSerializer::toQueryValue($count);
+        }
+        // query params
+        if ($where_order !== null) {
+            $queryParams['where_order'] = ObjectSerializer::toQueryValue($where_order);
         }
 
         // path params
@@ -3416,14 +3434,15 @@ class Bit4idPathgroupIdentitiesApi
      * @param  string $where_fiscal_code Returns the identities that have the specified fiscal code (optional)
      * @param  int $page Restricts the search to the chosen page (optional)
      * @param  int $count Sets the number of users per page to display (optional, default to 100)
+     * @param  string $where_order The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \&quot;**-**\&quot; in front of the value indicates descending order), then the second value and so on (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\InlineResponse2001|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404
+     * @return \OpenAPI\Client\Model\InlineResponse2002|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404
      */
-    public function listIdentities($organization_id, $where_provider = null, $where_user = null, $where_first_name = null, $where_last_name = null, $where_registered_by = null, $where_fiscal_code = null, $page = null, $count = 100)
+    public function listIdentities($organization_id, $where_provider = null, $where_user = null, $where_first_name = null, $where_last_name = null, $where_registered_by = null, $where_fiscal_code = null, $page = null, $count = 100, $where_order = null)
     {
-        list($response) = $this->listIdentitiesWithHttpInfo($organization_id, $where_provider, $where_user, $where_first_name, $where_last_name, $where_registered_by, $where_fiscal_code, $page, $count);
+        list($response) = $this->listIdentitiesWithHttpInfo($organization_id, $where_provider, $where_user, $where_first_name, $where_last_name, $where_registered_by, $where_fiscal_code, $page, $count, $where_order);
         return $response;
     }
 
@@ -3441,14 +3460,15 @@ class Bit4idPathgroupIdentitiesApi
      * @param  string $where_fiscal_code Returns the identities that have the specified fiscal code (optional)
      * @param  int $page Restricts the search to the chosen page (optional)
      * @param  int $count Sets the number of users per page to display (optional, default to 100)
+     * @param  string $where_order The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \&quot;**-**\&quot; in front of the value indicates descending order), then the second value and so on (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\InlineResponse2001|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\InlineResponse2002|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listIdentitiesWithHttpInfo($organization_id, $where_provider = null, $where_user = null, $where_first_name = null, $where_last_name = null, $where_registered_by = null, $where_fiscal_code = null, $page = null, $count = 100)
+    public function listIdentitiesWithHttpInfo($organization_id, $where_provider = null, $where_user = null, $where_first_name = null, $where_last_name = null, $where_registered_by = null, $where_fiscal_code = null, $page = null, $count = 100, $where_order = null)
     {
-        $request = $this->listIdentitiesRequest($organization_id, $where_provider, $where_user, $where_first_name, $where_last_name, $where_registered_by, $where_fiscal_code, $page, $count);
+        $request = $this->listIdentitiesRequest($organization_id, $where_provider, $where_user, $where_first_name, $where_last_name, $where_registered_by, $where_fiscal_code, $page, $count, $where_order);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3459,7 +3479,7 @@ class Bit4idPathgroupIdentitiesApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -3481,14 +3501,14 @@ class Bit4idPathgroupIdentitiesApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\InlineResponse2001' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\InlineResponse2002' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse2001', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse2002', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3496,7 +3516,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse401' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -3508,7 +3528,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse403' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -3520,7 +3540,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse404' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -3530,12 +3550,12 @@ class Bit4idPathgroupIdentitiesApi
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\InlineResponse2001';
+            $returnType = '\OpenAPI\Client\Model\InlineResponse2002';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
             }
 
             return [
@@ -3549,7 +3569,7 @@ class Bit4idPathgroupIdentitiesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineResponse2001',
+                        '\OpenAPI\Client\Model\InlineResponse2002',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3597,13 +3617,14 @@ class Bit4idPathgroupIdentitiesApi
      * @param  string $where_fiscal_code Returns the identities that have the specified fiscal code (optional)
      * @param  int $page Restricts the search to the chosen page (optional)
      * @param  int $count Sets the number of users per page to display (optional, default to 100)
+     * @param  string $where_order The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \&quot;**-**\&quot; in front of the value indicates descending order), then the second value and so on (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listIdentitiesAsync($organization_id, $where_provider = null, $where_user = null, $where_first_name = null, $where_last_name = null, $where_registered_by = null, $where_fiscal_code = null, $page = null, $count = 100)
+    public function listIdentitiesAsync($organization_id, $where_provider = null, $where_user = null, $where_first_name = null, $where_last_name = null, $where_registered_by = null, $where_fiscal_code = null, $page = null, $count = 100, $where_order = null)
     {
-        return $this->listIdentitiesAsyncWithHttpInfo($organization_id, $where_provider, $where_user, $where_first_name, $where_last_name, $where_registered_by, $where_fiscal_code, $page, $count)
+        return $this->listIdentitiesAsyncWithHttpInfo($organization_id, $where_provider, $where_user, $where_first_name, $where_last_name, $where_registered_by, $where_fiscal_code, $page, $count, $where_order)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3625,14 +3646,15 @@ class Bit4idPathgroupIdentitiesApi
      * @param  string $where_fiscal_code Returns the identities that have the specified fiscal code (optional)
      * @param  int $page Restricts the search to the chosen page (optional)
      * @param  int $count Sets the number of users per page to display (optional, default to 100)
+     * @param  string $where_order The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \&quot;**-**\&quot; in front of the value indicates descending order), then the second value and so on (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listIdentitiesAsyncWithHttpInfo($organization_id, $where_provider = null, $where_user = null, $where_first_name = null, $where_last_name = null, $where_registered_by = null, $where_fiscal_code = null, $page = null, $count = 100)
+    public function listIdentitiesAsyncWithHttpInfo($organization_id, $where_provider = null, $where_user = null, $where_first_name = null, $where_last_name = null, $where_registered_by = null, $where_fiscal_code = null, $page = null, $count = 100, $where_order = null)
     {
-        $returnType = '\OpenAPI\Client\Model\InlineResponse2001';
-        $request = $this->listIdentitiesRequest($organization_id, $where_provider, $where_user, $where_first_name, $where_last_name, $where_registered_by, $where_fiscal_code, $page, $count);
+        $returnType = '\OpenAPI\Client\Model\InlineResponse2002';
+        $request = $this->listIdentitiesRequest($organization_id, $where_provider, $where_user, $where_first_name, $where_last_name, $where_registered_by, $where_fiscal_code, $page, $count, $where_order);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3642,7 +3664,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -3680,11 +3702,12 @@ class Bit4idPathgroupIdentitiesApi
      * @param  string $where_fiscal_code Returns the identities that have the specified fiscal code (optional)
      * @param  int $page Restricts the search to the chosen page (optional)
      * @param  int $count Sets the number of users per page to display (optional, default to 100)
+     * @param  string $where_order The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \&quot;**-**\&quot; in front of the value indicates descending order), then the second value and so on (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function listIdentitiesRequest($organization_id, $where_provider = null, $where_user = null, $where_first_name = null, $where_last_name = null, $where_registered_by = null, $where_fiscal_code = null, $page = null, $count = 100)
+    protected function listIdentitiesRequest($organization_id, $where_provider = null, $where_user = null, $where_first_name = null, $where_last_name = null, $where_registered_by = null, $where_fiscal_code = null, $page = null, $count = 100, $where_order = null)
     {
         // verify the required parameter 'organization_id' is set
         if ($organization_id === null || (is_array($organization_id) && count($organization_id) === 0)) {
@@ -3738,6 +3761,10 @@ class Bit4idPathgroupIdentitiesApi
         // query params
         if ($count !== null) {
             $queryParams['count'] = ObjectSerializer::toQueryValue($count);
+        }
+        // query params
+        if ($where_order !== null) {
+            $queryParams['where_order'] = ObjectSerializer::toQueryValue($where_order);
         }
 
         // path params
@@ -3827,14 +3854,15 @@ class Bit4idPathgroupIdentitiesApi
      * @param  \OpenAPI\Client\Model\Id $user_id The **user-id** is the uuid code that identifies a user of an organization. It is used as a path parameter to restrict the requested operation to the scope of that user (required)
      * @param  int $page Restricts the search to the chosen page (optional)
      * @param  int $count Sets the number of users per page to display (optional, default to 100)
+     * @param  string $where_order The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \&quot;**-**\&quot; in front of the value indicates descending order), then the second value and so on (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\InlineResponse2005|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404
+     * @return \OpenAPI\Client\Model\InlineResponse2003|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404
      */
-    public function listUserEnrollments($organization_id, $user_id, $page = null, $count = 100)
+    public function listUserEnrollments($organization_id, $user_id, $page = null, $count = 100, $where_order = null)
     {
-        list($response) = $this->listUserEnrollmentsWithHttpInfo($organization_id, $user_id, $page, $count);
+        list($response) = $this->listUserEnrollmentsWithHttpInfo($organization_id, $user_id, $page, $count, $where_order);
         return $response;
     }
 
@@ -3847,14 +3875,15 @@ class Bit4idPathgroupIdentitiesApi
      * @param  \OpenAPI\Client\Model\Id $user_id The **user-id** is the uuid code that identifies a user of an organization. It is used as a path parameter to restrict the requested operation to the scope of that user (required)
      * @param  int $page Restricts the search to the chosen page (optional)
      * @param  int $count Sets the number of users per page to display (optional, default to 100)
+     * @param  string $where_order The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \&quot;**-**\&quot; in front of the value indicates descending order), then the second value and so on (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\InlineResponse2005|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\InlineResponse2003|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listUserEnrollmentsWithHttpInfo($organization_id, $user_id, $page = null, $count = 100)
+    public function listUserEnrollmentsWithHttpInfo($organization_id, $user_id, $page = null, $count = 100, $where_order = null)
     {
-        $request = $this->listUserEnrollmentsRequest($organization_id, $user_id, $page, $count);
+        $request = $this->listUserEnrollmentsRequest($organization_id, $user_id, $page, $count, $where_order);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3865,7 +3894,7 @@ class Bit4idPathgroupIdentitiesApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -3887,14 +3916,14 @@ class Bit4idPathgroupIdentitiesApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\InlineResponse2005' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\InlineResponse2003' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse2005', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse2003', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3902,7 +3931,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse401' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -3914,7 +3943,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse403' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -3926,7 +3955,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse404' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -3936,12 +3965,12 @@ class Bit4idPathgroupIdentitiesApi
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\InlineResponse2005';
+            $returnType = '\OpenAPI\Client\Model\InlineResponse2003';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
             }
 
             return [
@@ -3955,7 +3984,7 @@ class Bit4idPathgroupIdentitiesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineResponse2005',
+                        '\OpenAPI\Client\Model\InlineResponse2003',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3998,13 +4027,14 @@ class Bit4idPathgroupIdentitiesApi
      * @param  \OpenAPI\Client\Model\Id $user_id The **user-id** is the uuid code that identifies a user of an organization. It is used as a path parameter to restrict the requested operation to the scope of that user (required)
      * @param  int $page Restricts the search to the chosen page (optional)
      * @param  int $count Sets the number of users per page to display (optional, default to 100)
+     * @param  string $where_order The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \&quot;**-**\&quot; in front of the value indicates descending order), then the second value and so on (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listUserEnrollmentsAsync($organization_id, $user_id, $page = null, $count = 100)
+    public function listUserEnrollmentsAsync($organization_id, $user_id, $page = null, $count = 100, $where_order = null)
     {
-        return $this->listUserEnrollmentsAsyncWithHttpInfo($organization_id, $user_id, $page, $count)
+        return $this->listUserEnrollmentsAsyncWithHttpInfo($organization_id, $user_id, $page, $count, $where_order)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4021,14 +4051,15 @@ class Bit4idPathgroupIdentitiesApi
      * @param  \OpenAPI\Client\Model\Id $user_id The **user-id** is the uuid code that identifies a user of an organization. It is used as a path parameter to restrict the requested operation to the scope of that user (required)
      * @param  int $page Restricts the search to the chosen page (optional)
      * @param  int $count Sets the number of users per page to display (optional, default to 100)
+     * @param  string $where_order The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \&quot;**-**\&quot; in front of the value indicates descending order), then the second value and so on (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listUserEnrollmentsAsyncWithHttpInfo($organization_id, $user_id, $page = null, $count = 100)
+    public function listUserEnrollmentsAsyncWithHttpInfo($organization_id, $user_id, $page = null, $count = 100, $where_order = null)
     {
-        $returnType = '\OpenAPI\Client\Model\InlineResponse2005';
-        $request = $this->listUserEnrollmentsRequest($organization_id, $user_id, $page, $count);
+        $returnType = '\OpenAPI\Client\Model\InlineResponse2003';
+        $request = $this->listUserEnrollmentsRequest($organization_id, $user_id, $page, $count, $where_order);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4038,7 +4069,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -4071,11 +4102,12 @@ class Bit4idPathgroupIdentitiesApi
      * @param  \OpenAPI\Client\Model\Id $user_id The **user-id** is the uuid code that identifies a user of an organization. It is used as a path parameter to restrict the requested operation to the scope of that user (required)
      * @param  int $page Restricts the search to the chosen page (optional)
      * @param  int $count Sets the number of users per page to display (optional, default to 100)
+     * @param  string $where_order The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \&quot;**-**\&quot; in front of the value indicates descending order), then the second value and so on (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function listUserEnrollmentsRequest($organization_id, $user_id, $page = null, $count = 100)
+    protected function listUserEnrollmentsRequest($organization_id, $user_id, $page = null, $count = 100, $where_order = null)
     {
         // verify the required parameter 'organization_id' is set
         if ($organization_id === null || (is_array($organization_id) && count($organization_id) === 0)) {
@@ -4111,6 +4143,10 @@ class Bit4idPathgroupIdentitiesApi
         // query params
         if ($count !== null) {
             $queryParams['count'] = ObjectSerializer::toQueryValue($count);
+        }
+        // query params
+        if ($where_order !== null) {
+            $queryParams['where_order'] = ObjectSerializer::toQueryValue($where_order);
         }
 
         // path params
@@ -4208,14 +4244,15 @@ class Bit4idPathgroupIdentitiesApi
      * @param  \OpenAPI\Client\Model\Id $user_id The **user-id** is the uuid code that identifies a user of an organization. It is used as a path parameter to restrict the requested operation to the scope of that user (required)
      * @param  int $page Restricts the search to the chosen page (optional)
      * @param  int $count Sets the number of users per page to display (optional, default to 100)
+     * @param  string $where_order The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \&quot;**-**\&quot; in front of the value indicates descending order), then the second value and so on (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\InlineResponse2001|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404
+     * @return \OpenAPI\Client\Model\InlineResponse2002|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404
      */
-    public function listUserIdentities($organization_id, $user_id, $page = null, $count = 100)
+    public function listUserIdentities($organization_id, $user_id, $page = null, $count = 100, $where_order = null)
     {
-        list($response) = $this->listUserIdentitiesWithHttpInfo($organization_id, $user_id, $page, $count);
+        list($response) = $this->listUserIdentitiesWithHttpInfo($organization_id, $user_id, $page, $count, $where_order);
         return $response;
     }
 
@@ -4228,14 +4265,15 @@ class Bit4idPathgroupIdentitiesApi
      * @param  \OpenAPI\Client\Model\Id $user_id The **user-id** is the uuid code that identifies a user of an organization. It is used as a path parameter to restrict the requested operation to the scope of that user (required)
      * @param  int $page Restricts the search to the chosen page (optional)
      * @param  int $count Sets the number of users per page to display (optional, default to 100)
+     * @param  string $where_order The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \&quot;**-**\&quot; in front of the value indicates descending order), then the second value and so on (optional)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\InlineResponse2001|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\InlineResponse2002|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listUserIdentitiesWithHttpInfo($organization_id, $user_id, $page = null, $count = 100)
+    public function listUserIdentitiesWithHttpInfo($organization_id, $user_id, $page = null, $count = 100, $where_order = null)
     {
-        $request = $this->listUserIdentitiesRequest($organization_id, $user_id, $page, $count);
+        $request = $this->listUserIdentitiesRequest($organization_id, $user_id, $page, $count, $where_order);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4246,7 +4284,7 @@ class Bit4idPathgroupIdentitiesApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -4268,14 +4306,14 @@ class Bit4idPathgroupIdentitiesApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\InlineResponse2001' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\InlineResponse2002' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse2001', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse2002', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -4283,7 +4321,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse401' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -4295,7 +4333,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse403' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -4307,7 +4345,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse404' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -4317,12 +4355,12 @@ class Bit4idPathgroupIdentitiesApi
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\InlineResponse2001';
+            $returnType = '\OpenAPI\Client\Model\InlineResponse2002';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
             }
 
             return [
@@ -4336,7 +4374,7 @@ class Bit4idPathgroupIdentitiesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineResponse2001',
+                        '\OpenAPI\Client\Model\InlineResponse2002',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4379,13 +4417,14 @@ class Bit4idPathgroupIdentitiesApi
      * @param  \OpenAPI\Client\Model\Id $user_id The **user-id** is the uuid code that identifies a user of an organization. It is used as a path parameter to restrict the requested operation to the scope of that user (required)
      * @param  int $page Restricts the search to the chosen page (optional)
      * @param  int $count Sets the number of users per page to display (optional, default to 100)
+     * @param  string $where_order The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \&quot;**-**\&quot; in front of the value indicates descending order), then the second value and so on (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listUserIdentitiesAsync($organization_id, $user_id, $page = null, $count = 100)
+    public function listUserIdentitiesAsync($organization_id, $user_id, $page = null, $count = 100, $where_order = null)
     {
-        return $this->listUserIdentitiesAsyncWithHttpInfo($organization_id, $user_id, $page, $count)
+        return $this->listUserIdentitiesAsyncWithHttpInfo($organization_id, $user_id, $page, $count, $where_order)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4402,14 +4441,15 @@ class Bit4idPathgroupIdentitiesApi
      * @param  \OpenAPI\Client\Model\Id $user_id The **user-id** is the uuid code that identifies a user of an organization. It is used as a path parameter to restrict the requested operation to the scope of that user (required)
      * @param  int $page Restricts the search to the chosen page (optional)
      * @param  int $count Sets the number of users per page to display (optional, default to 100)
+     * @param  string $where_order The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \&quot;**-**\&quot; in front of the value indicates descending order), then the second value and so on (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listUserIdentitiesAsyncWithHttpInfo($organization_id, $user_id, $page = null, $count = 100)
+    public function listUserIdentitiesAsyncWithHttpInfo($organization_id, $user_id, $page = null, $count = 100, $where_order = null)
     {
-        $returnType = '\OpenAPI\Client\Model\InlineResponse2001';
-        $request = $this->listUserIdentitiesRequest($organization_id, $user_id, $page, $count);
+        $returnType = '\OpenAPI\Client\Model\InlineResponse2002';
+        $request = $this->listUserIdentitiesRequest($organization_id, $user_id, $page, $count, $where_order);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4419,7 +4459,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -4452,11 +4492,12 @@ class Bit4idPathgroupIdentitiesApi
      * @param  \OpenAPI\Client\Model\Id $user_id The **user-id** is the uuid code that identifies a user of an organization. It is used as a path parameter to restrict the requested operation to the scope of that user (required)
      * @param  int $page Restricts the search to the chosen page (optional)
      * @param  int $count Sets the number of users per page to display (optional, default to 100)
+     * @param  string $where_order The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \&quot;**-**\&quot; in front of the value indicates descending order), then the second value and so on (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function listUserIdentitiesRequest($organization_id, $user_id, $page = null, $count = 100)
+    protected function listUserIdentitiesRequest($organization_id, $user_id, $page = null, $count = 100, $where_order = null)
     {
         // verify the required parameter 'organization_id' is set
         if ($organization_id === null || (is_array($organization_id) && count($organization_id) === 0)) {
@@ -4492,6 +4533,10 @@ class Bit4idPathgroupIdentitiesApi
         // query params
         if ($count !== null) {
             $queryParams['count'] = ObjectSerializer::toQueryValue($count);
+        }
+        // query params
+        if ($where_order !== null) {
+            $queryParams['where_order'] = ObjectSerializer::toQueryValue($where_order);
         }
 
         // path params
@@ -4581,6 +4626,396 @@ class Bit4idPathgroupIdentitiesApi
     }
 
     /**
+     * Operation renewIdentity
+     *
+     * Renew an Identity
+     *
+     * @param  string $organization_id The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization (required)
+     * @param  \OpenAPI\Client\Model\Id $enrollment_id The **enrollment-id** is the uuid code that identifies a specific enrollment request (required)
+     * @param  \OpenAPI\Client\Model\InlineObject1 $inline_object1 inline_object1 (required)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\InlineResponse2007|\OpenAPI\Client\Model\InlineResponse404|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404
+     */
+    public function renewIdentity($organization_id, $enrollment_id, $inline_object1)
+    {
+        list($response) = $this->renewIdentityWithHttpInfo($organization_id, $enrollment_id, $inline_object1);
+        return $response;
+    }
+
+    /**
+     * Operation renewIdentityWithHttpInfo
+     *
+     * Renew an Identity
+     *
+     * @param  string $organization_id The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization (required)
+     * @param  \OpenAPI\Client\Model\Id $enrollment_id The **enrollment-id** is the uuid code that identifies a specific enrollment request (required)
+     * @param  \OpenAPI\Client\Model\InlineObject1 $inline_object1 (required)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\InlineResponse2007|\OpenAPI\Client\Model\InlineResponse404|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function renewIdentityWithHttpInfo($organization_id, $enrollment_id, $inline_object1)
+    {
+        $request = $this->renewIdentityRequest($organization_id, $enrollment_id, $inline_object1);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\InlineResponse2007' === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = (string) $responseBody;
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse2007', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\OpenAPI\Client\Model\InlineResponse404' === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = (string) $responseBody;
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse404', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\OpenAPI\Client\Model\InlineResponse401' === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = (string) $responseBody;
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse401', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 403:
+                    if ('\OpenAPI\Client\Model\InlineResponse403' === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = (string) $responseBody;
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse403', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\OpenAPI\Client\Model\InlineResponse404' === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = (string) $responseBody;
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse404', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\InlineResponse2007';
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = (string) $responseBody;
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\InlineResponse2007',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\InlineResponse404',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\InlineResponse401',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\InlineResponse403',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\InlineResponse404',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation renewIdentityAsync
+     *
+     * Renew an Identity
+     *
+     * @param  string $organization_id The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization (required)
+     * @param  \OpenAPI\Client\Model\Id $enrollment_id The **enrollment-id** is the uuid code that identifies a specific enrollment request (required)
+     * @param  \OpenAPI\Client\Model\InlineObject1 $inline_object1 (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function renewIdentityAsync($organization_id, $enrollment_id, $inline_object1)
+    {
+        return $this->renewIdentityAsyncWithHttpInfo($organization_id, $enrollment_id, $inline_object1)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation renewIdentityAsyncWithHttpInfo
+     *
+     * Renew an Identity
+     *
+     * @param  string $organization_id The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization (required)
+     * @param  \OpenAPI\Client\Model\Id $enrollment_id The **enrollment-id** is the uuid code that identifies a specific enrollment request (required)
+     * @param  \OpenAPI\Client\Model\InlineObject1 $inline_object1 (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function renewIdentityAsyncWithHttpInfo($organization_id, $enrollment_id, $inline_object1)
+    {
+        $returnType = '\OpenAPI\Client\Model\InlineResponse2007';
+        $request = $this->renewIdentityRequest($organization_id, $enrollment_id, $inline_object1);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = (string) $responseBody;
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'renewIdentity'
+     *
+     * @param  string $organization_id The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization (required)
+     * @param  \OpenAPI\Client\Model\Id $enrollment_id The **enrollment-id** is the uuid code that identifies a specific enrollment request (required)
+     * @param  \OpenAPI\Client\Model\InlineObject1 $inline_object1 (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function renewIdentityRequest($organization_id, $enrollment_id, $inline_object1)
+    {
+        // verify the required parameter 'organization_id' is set
+        if ($organization_id === null || (is_array($organization_id) && count($organization_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $organization_id when calling renewIdentity'
+            );
+        }
+        // verify the required parameter 'enrollment_id' is set
+        if ($enrollment_id === null || (is_array($enrollment_id) && count($enrollment_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $enrollment_id when calling renewIdentity'
+            );
+        }
+        // verify the required parameter 'inline_object1' is set
+        if ($inline_object1 === null || (is_array($inline_object1) && count($inline_object1) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $inline_object1 when calling renewIdentity'
+            );
+        }
+
+        $resourcePath = '/{organization-id}/identity-requests/{enrollment-id}/renew';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($organization_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'organization-id' . '}',
+                ObjectSerializer::toPathValue($organization_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($enrollment_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'enrollment-id' . '}',
+                ObjectSerializer::toPathValue($enrollment_id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+        if (isset($inline_object1)) {
+            $_tempBody = $inline_object1;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            if ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
+            } else {
+                $httpBody = $_tempBody;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation requestEnrollment
      *
      * Submit an enrollment request
@@ -4590,7 +5025,7 @@ class Bit4idPathgroupIdentitiesApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\InlineResponse2011|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404|\OpenAPI\Client\Model\InlineResponse404
+     * @return \OpenAPI\Client\Model\InlineResponse2007|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404|\OpenAPI\Client\Model\InlineResponse404
      */
     public function requestEnrollment($organization_id, $identity_request)
     {
@@ -4608,7 +5043,7 @@ class Bit4idPathgroupIdentitiesApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\InlineResponse2011|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404|\OpenAPI\Client\Model\InlineResponse404, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\InlineResponse2007|\OpenAPI\Client\Model\InlineResponse401|\OpenAPI\Client\Model\InlineResponse403|\OpenAPI\Client\Model\InlineResponse404|\OpenAPI\Client\Model\InlineResponse404, HTTP status code, HTTP response headers (array of strings)
      */
     public function requestEnrollmentWithHttpInfo($organization_id, $identity_request)
     {
@@ -4623,7 +5058,7 @@ class Bit4idPathgroupIdentitiesApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -4645,14 +5080,14 @@ class Bit4idPathgroupIdentitiesApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\InlineResponse2011' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\InlineResponse2007' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse2011', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse2007', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -4660,7 +5095,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse401' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -4672,7 +5107,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse403' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -4684,7 +5119,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse404' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -4696,7 +5131,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ('\OpenAPI\Client\Model\InlineResponse404' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [
@@ -4706,12 +5141,12 @@ class Bit4idPathgroupIdentitiesApi
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\InlineResponse2011';
+            $returnType = '\OpenAPI\Client\Model\InlineResponse2007';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
             }
 
             return [
@@ -4725,7 +5160,7 @@ class Bit4idPathgroupIdentitiesApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineResponse2011',
+                        '\OpenAPI\Client\Model\InlineResponse2007',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4801,7 +5236,7 @@ class Bit4idPathgroupIdentitiesApi
      */
     public function requestEnrollmentAsyncWithHttpInfo($organization_id, $identity_request)
     {
-        $returnType = '\OpenAPI\Client\Model\InlineResponse2011';
+        $returnType = '\OpenAPI\Client\Model\InlineResponse2007';
         $request = $this->requestEnrollmentRequest($organization_id, $identity_request);
 
         return $this->client
@@ -4812,7 +5247,7 @@ class Bit4idPathgroupIdentitiesApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                     }
 
                     return [

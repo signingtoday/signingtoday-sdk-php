@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**automatic** | **bool** | True means the User is an automatic signer | [optional] 
-**created_by** | **string** | The user created the User (user_name@organization-id). It may be a user of the system as well. | [optional] 
+**id** | **string** | Uuid code that identifies the User | 
 **email** | **string** | The email associated to the User | [optional] 
 **first_name** | **string** | First name of the User | [optional] 
-**id** | **string** | Uuid code that identifies the User | 
 **last_name** | **string** | Last name of the User | [optional] 
+**created_by** | **string** | The user created the User (user_name@organization-id). It may be a user of the system as well. | [optional] 
+**automatic** | **bool** | True means the User is an automatic signer | [optional] 
 **owner** | **bool** | The owner field gives to the User administrative permissions | [optional] 
 **rao** | **bool** | The rao field identifies a RAO User | [optional] 
 

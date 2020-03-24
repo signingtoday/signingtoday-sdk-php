@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**\OpenAPI\Client\Model\InlineResponse20010Data**](InlineResponse20010Data.md) |  | [optional] 
-**meta** | [**\OpenAPI\Client\Model\MetaDataSuccess**](MetaDataSuccess.md) |  | [optional] 
+**meta** | [**\OpenAPI\Client\Model\InlineResponse2009Meta**](InlineResponse2009Meta.md) |  | [optional] 
+**data** | [**\OpenAPI\Client\Model\SignatureTransaction**](SignatureTransaction.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

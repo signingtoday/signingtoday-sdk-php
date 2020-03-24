@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## createToken
 
-> \OpenAPI\Client\Model\InlineResponse2014 createToken($organization_id, $create_token)
+> \OpenAPI\Client\Model\InlineResponse2015 createToken($organization_id, $create_token)
 
 Create an application token
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InlineResponse2014**](../Model/InlineResponse2014.md)
+[**\OpenAPI\Client\Model\InlineResponse2015**](../Model/InlineResponse2015.md)
 
 ### Authorization
 
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 
 ## getToken
 
-> \OpenAPI\Client\Model\InlineResponse2014 getToken($organization_id, $token_id)
+> \OpenAPI\Client\Model\InlineResponse2015 getToken($organization_id, $token_id)
 
 Get information about a token
 
@@ -192,7 +192,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InlineResponse2014**](../Model/InlineResponse2014.md)
+[**\OpenAPI\Client\Model\InlineResponse2015**](../Model/InlineResponse2015.md)
 
 ### Authorization
 
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 
 ## listTokens
 
-> \OpenAPI\Client\Model\InlineResponse20011 listTokens($organization_id, $where_user, $where_label, $count, $page)
+> \OpenAPI\Client\Model\InlineResponse2004 listTokens($organization_id, $where_user, $where_label, $count, $page, $where_order)
 
 Enumerate the tokens of an organization
 
@@ -240,9 +240,10 @@ $where_user = jdo; // string | Returns the tokens of the specified user, searche
 $where_label = token; // string | Returns the tokens with the specified label
 $count = 100; // int | Sets the number of tokens per page to display
 $page = 1; // int | Restricts the search to chosen page
+$where_order = where_first_name; // string | The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \"**-**\" in front of the value indicates descending order), then the second value and so on
 
 try {
-    $result = $apiInstance->listTokens($organization_id, $where_user, $where_label, $count, $page);
+    $result = $apiInstance->listTokens($organization_id, $where_user, $where_label, $count, $page, $where_order);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TokensApi->listTokens: ', $e->getMessage(), PHP_EOL;
@@ -260,10 +261,11 @@ Name | Type | Description  | Notes
  **where_label** | **string**| Returns the tokens with the specified label | [optional]
  **count** | **int**| Sets the number of tokens per page to display | [optional] [default to 100]
  **page** | **int**| Restricts the search to chosen page | [optional]
+ **where_order** | **string**| The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \&quot;**-**\&quot; in front of the value indicates descending order), then the second value and so on | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InlineResponse20011**](../Model/InlineResponse20011.md)
+[**\OpenAPI\Client\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
 
 ### Authorization
 
@@ -281,7 +283,7 @@ Name | Type | Description  | Notes
 
 ## listUserTokens
 
-> \OpenAPI\Client\Model\InlineResponse20011 listUserTokens($organization_id, $user_id, $page, $count)
+> \OpenAPI\Client\Model\InlineResponse2004 listUserTokens($organization_id, $user_id, $page, $count, $where_order)
 
 Enumerate the tokens of an user
 
@@ -310,9 +312,10 @@ $organization_id = api-demo; // string | The **organization-id** represents an o
 $user_id = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\Id(); // \OpenAPI\Client\Model\Id | The **user-id** is the uuid code that identifies a user of an organization. It is used as a path parameter to restrict the requested operation to the scope of that user
 $page = 1; // int | Restricts the search to the chosen page
 $count = 100; // int | Sets the number of users per page to display
+$where_order = where_first_name; // string | The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \"**-**\" in front of the value indicates descending order), then the second value and so on
 
 try {
-    $result = $apiInstance->listUserTokens($organization_id, $user_id, $page, $count);
+    $result = $apiInstance->listUserTokens($organization_id, $user_id, $page, $count, $where_order);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TokensApi->listUserTokens: ', $e->getMessage(), PHP_EOL;
@@ -329,10 +332,11 @@ Name | Type | Description  | Notes
  **user_id** | [**\OpenAPI\Client\Model\Id**](../Model/.md)| The **user-id** is the uuid code that identifies a user of an organization. It is used as a path parameter to restrict the requested operation to the scope of that user |
  **page** | **int**| Restricts the search to the chosen page | [optional]
  **count** | **int**| Sets the number of users per page to display | [optional] [default to 100]
+ **where_order** | **string**| The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \&quot;**-**\&quot; in front of the value indicates descending order), then the second value and so on | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InlineResponse20011**](../Model/InlineResponse20011.md)
+[**\OpenAPI\Client\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
 
 ### Authorization
 
@@ -350,7 +354,7 @@ Name | Type | Description  | Notes
 
 ## updateToken
 
-> \OpenAPI\Client\Model\InlineResponse2014 updateToken($organization_id, $token_id, $update_token)
+> \OpenAPI\Client\Model\InlineResponse2015 updateToken($organization_id, $token_id, $update_token)
 
 Update the properties of a token
 
@@ -399,7 +403,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InlineResponse2014**](../Model/InlineResponse2014.md)
+[**\OpenAPI\Client\Model\InlineResponse2015**](../Model/InlineResponse2015.md)
 
 ### Authorization
 

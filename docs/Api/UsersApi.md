@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## createUser
 
-> \OpenAPI\Client\Model\InlineResponse2015 createUser($organization_id, $create_user)
+> \OpenAPI\Client\Model\InlineResponse201 createUser($organization_id, $create_user)
 
 Create a user of the organization
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InlineResponse2015**](../Model/InlineResponse2015.md)
+[**\OpenAPI\Client\Model\InlineResponse201**](../Model/InlineResponse201.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 
 ## getUser
 
-> \OpenAPI\Client\Model\InlineResponse2015 getUser($organization_id, $user_id)
+> \OpenAPI\Client\Model\InlineResponse201 getUser($organization_id, $user_id)
 
 Get information about an user
 
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InlineResponse2015**](../Model/InlineResponse2015.md)
+[**\OpenAPI\Client\Model\InlineResponse201**](../Model/InlineResponse201.md)
 
 ### Authorization
 
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 
 ## listUsers
 
-> \OpenAPI\Client\Model\InlineResponse20012 listUsers($organization_id, $where_membership_id, $where_email, $where_last_name, $where_first_name, $page, $count)
+> \OpenAPI\Client\Model\InlineResponse2001 listUsers($organization_id, $where_membership_id, $where_email, $where_last_name, $where_first_name, $where_automatic, $where_rao, $page, $count, $where_order)
 
 Enumerate the users of an organization
 
@@ -173,11 +173,14 @@ $where_membership_id = jdo; // string | Returns the users that have the specifie
 $where_email = test@mail.com; // string | Returns the users that have the specified email
 $where_last_name = Doe; // string | Returns the users that have the specified last name
 $where_first_name = John; // string | Returns the users that have the specified first name
+$where_automatic = false; // bool | If set up to **true** returns automatic users only, otherwise returns non automatic users only
+$where_rao = false; // bool | If set up to **true** returns rao users only, otherwise returns non rao users only
 $page = 1; // int | Restricts the search to the chosen page
 $count = 100; // int | Sets the number of users per page to display
+$where_order = where_first_name; // string | The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \"**-**\" in front of the value indicates descending order), then the second value and so on
 
 try {
-    $result = $apiInstance->listUsers($organization_id, $where_membership_id, $where_email, $where_last_name, $where_first_name, $page, $count);
+    $result = $apiInstance->listUsers($organization_id, $where_membership_id, $where_email, $where_last_name, $where_first_name, $where_automatic, $where_rao, $page, $count, $where_order);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->listUsers: ', $e->getMessage(), PHP_EOL;
@@ -195,12 +198,15 @@ Name | Type | Description  | Notes
  **where_email** | **string**| Returns the users that have the specified email | [optional]
  **where_last_name** | **string**| Returns the users that have the specified last name | [optional]
  **where_first_name** | **string**| Returns the users that have the specified first name | [optional]
+ **where_automatic** | **bool**| If set up to **true** returns automatic users only, otherwise returns non automatic users only | [optional]
+ **where_rao** | **bool**| If set up to **true** returns rao users only, otherwise returns non rao users only | [optional]
  **page** | **int**| Restricts the search to the chosen page | [optional]
  **count** | **int**| Sets the number of users per page to display | [optional] [default to 100]
+ **where_order** | **string**| The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \&quot;**-**\&quot; in front of the value indicates descending order), then the second value and so on | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
+[**\OpenAPI\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -218,7 +224,7 @@ Name | Type | Description  | Notes
 
 ## updateUser
 
-> \OpenAPI\Client\Model\InlineResponse2015 updateUser($organization_id, $user_id, $update_user)
+> \OpenAPI\Client\Model\InlineResponse201 updateUser($organization_id, $user_id, $update_user)
 
 Edit one or more user properties
 
@@ -267,7 +273,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InlineResponse2015**](../Model/InlineResponse2015.md)
+[**\OpenAPI\Client\Model\InlineResponse201**](../Model/InlineResponse201.md)
 
 ### Authorization
 

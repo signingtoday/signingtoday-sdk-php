@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createChannel
 
-> \OpenAPI\Client\Model\InlineResponse201 createChannel($organization_id, $dst_id)
+> \OpenAPI\Client\Model\InlineResponse2014 createChannel($organization_id, $dst_id)
 
 Create a channel
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InlineResponse201**](../Model/InlineResponse201.md)
+[**\OpenAPI\Client\Model\InlineResponse2014**](../Model/InlineResponse2014.md)
 
 ### Authorization
 
@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 
 ## declineDST
 
-> \OpenAPI\Client\Model\InlineResponse2013 declineDST($organization_id, $signature_id, $inline_object2)
+> \OpenAPI\Client\Model\InlineResponse2013 declineDST($organization_id, $signature_id, $inline_object5)
 
 Decline a Digital Signature Transaction
 
@@ -106,10 +106,10 @@ $apiInstance = new OpenAPI\Client\Api\Bit4idPathgroupSignaturesApi(
 );
 $organization_id = api-demo; // string | The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization
 $signature_id = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\Id(); // \OpenAPI\Client\Model\Id | The **signature-id** is the uuid code that identifies a signature that has to be performed into a digital signature transaction. It is usually used in the API endpoints to perform, decline or cancel a digital signature transaction
-$inline_object2 = new \OpenAPI\Client\Model\InlineObject2(); // \OpenAPI\Client\Model\InlineObject2 | 
+$inline_object5 = new \OpenAPI\Client\Model\InlineObject5(); // \OpenAPI\Client\Model\InlineObject5 | 
 
 try {
-    $result = $apiInstance->declineDST($organization_id, $signature_id, $inline_object2);
+    $result = $apiInstance->declineDST($organization_id, $signature_id, $inline_object5);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling Bit4idPathgroupSignaturesApi->declineDST: ', $e->getMessage(), PHP_EOL;
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organization_id** | **string**| The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization | [default to &#39;api-demo&#39;]
  **signature_id** | [**\OpenAPI\Client\Model\Id**](../Model/.md)| The **signature-id** is the uuid code that identifies a signature that has to be performed into a digital signature transaction. It is usually used in the API endpoints to perform, decline or cancel a digital signature transaction |
- **inline_object2** | [**\OpenAPI\Client\Model\InlineObject2**](../Model/InlineObject2.md)|  |
+ **inline_object5** | [**\OpenAPI\Client\Model\InlineObject5**](../Model/InlineObject5.md)|  |
 
 ### Return type
 
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ## performDST
 
-> \OpenAPI\Client\Model\InlineResponse2008 performDST($organization_id, $signature_id, $automatic_signature)
+> \OpenAPI\Client\Model\InlineResponse20011 performDST($organization_id, $signature_id, $automatic_signature)
 
 Sign a DST with an automatic signer
 
@@ -195,7 +195,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
+[**\OpenAPI\Client\Model\InlineResponse20011**](../Model/InlineResponse20011.md)
 
 ### Authorization
 
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 
 ## performSignature
 
-> \OpenAPI\Client\Model\InlineResponse2009 performSignature($organization_id, $signature_id, $identity_id, $inline_object3)
+> \OpenAPI\Client\Model\InlineResponse20012 performSignature($organization_id, $signature_id, $identity_id, $inline_object3)
 
 Perform a Signature
 
@@ -264,7 +264,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InlineResponse2009**](../Model/InlineResponse2009.md)
+[**\OpenAPI\Client\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
 
 ### Authorization
 
@@ -282,7 +282,7 @@ Name | Type | Description  | Notes
 
 ## performSignatureWithSession
 
-> \OpenAPI\Client\Model\InlineResponse20010 performSignatureWithSession($organization_id, $signature_id, $inline_object4)
+> \OpenAPI\Client\Model\InlineResponse20013 performSignatureWithSession($organization_id, $signature_id, $inline_object4)
 
 Perform a Signature with session
 
@@ -331,7 +331,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InlineResponse20010**](../Model/InlineResponse20010.md)
+[**\OpenAPI\Client\Model\InlineResponse20013**](../Model/InlineResponse20013.md)
 
 ### Authorization
 

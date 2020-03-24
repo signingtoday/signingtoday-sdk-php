@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**cancelDST**](SignatureTransactionsApi.md#cancelDST) | **POST** /{organization-id}/signature-transactions/{dst-id}/cancel | Mark a DST as canceled
 [**createDST**](SignatureTransactionsApi.md#createDST) | **POST** /{organization-id}/signature-transactions | Create a Digital Signature Transaction
 [**deleteDST**](SignatureTransactionsApi.md#deleteDST) | **DELETE** /{organization-id}/signature-transactions/{dst-id} | Delete a Digital Signature Transaction
+[**deleteDSTResources**](SignatureTransactionsApi.md#deleteDSTResources) | **DELETE** /{organization-id}/signature-transactions/{dst-id}/resources | Delete the resources of a DST
 [**getDST**](SignatureTransactionsApi.md#getDST) | **GET** /{organization-id}/signature-transactions/{dst-id} | Get information about a DST
 [**getDocument**](SignatureTransactionsApi.md#getDocument) | **GET** /{organization-id}/documents/{document-id}/download | Download a document from a DST
 [**listDSTs**](SignatureTransactionsApi.md#listDSTs) | **GET** /{organization-id}/signature-transactions | List the DSTs of an organization
@@ -15,7 +16,7 @@ Method | HTTP request | Description
 
 ## cancelDST
 
-> \OpenAPI\Client\Model\InlineResponse2013 cancelDST($organization_id, $dst_id, $inline_object1)
+> \OpenAPI\Client\Model\InlineResponse2013 cancelDST($organization_id, $dst_id, $inline_object2)
 
 Mark a DST as canceled
 
@@ -42,10 +43,10 @@ $apiInstance = new OpenAPI\Client\Api\SignatureTransactionsApi(
 );
 $organization_id = api-demo; // string | The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization
 $dst_id = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\Id(); // \OpenAPI\Client\Model\Id | The **dst-id** is the uuid code that identifies a digital signature transaction. It is used as a path parameter to filter the requested operation to the specified **dst**
-$inline_object1 = new \OpenAPI\Client\Model\InlineObject1(); // \OpenAPI\Client\Model\InlineObject1 | 
+$inline_object2 = new \OpenAPI\Client\Model\InlineObject2(); // \OpenAPI\Client\Model\InlineObject2 | 
 
 try {
-    $result = $apiInstance->cancelDST($organization_id, $dst_id, $inline_object1);
+    $result = $apiInstance->cancelDST($organization_id, $dst_id, $inline_object2);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SignatureTransactionsApi->cancelDST: ', $e->getMessage(), PHP_EOL;
@@ -60,7 +61,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organization_id** | **string**| The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization | [default to &#39;api-demo&#39;]
  **dst_id** | [**\OpenAPI\Client\Model\Id**](../Model/.md)| The **dst-id** is the uuid code that identifies a digital signature transaction. It is used as a path parameter to filter the requested operation to the specified **dst** |
- **inline_object1** | [**\OpenAPI\Client\Model\InlineObject1**](../Model/InlineObject1.md)|  |
+ **inline_object2** | [**\OpenAPI\Client\Model\InlineObject2**](../Model/InlineObject2.md)|  |
 
 ### Return type
 
@@ -147,7 +148,7 @@ Name | Type | Description  | Notes
 
 ## deleteDST
 
-> \OpenAPI\Client\Model\InlineResponse2007 deleteDST($organization_id, $dst_id)
+> \OpenAPI\Client\Model\InlineResponse2009 deleteDST($organization_id, $dst_id)
 
 Delete a Digital Signature Transaction
 
@@ -194,7 +195,72 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InlineResponse2007**](../Model/InlineResponse2007.md)
+[**\OpenAPI\Client\Model\InlineResponse2009**](../Model/InlineResponse2009.md)
+
+### Authorization
+
+[ApiKeyAuth](../../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
+
+
+## deleteDSTResources
+
+> \OpenAPI\Client\Model\InlineResponse20010 deleteDSTResources($organization_id, $dst_id)
+
+Delete the resources of a DST
+
+This API allows to delete the resources of a Digital Signature Transaction.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: ApiKeyAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+
+$apiInstance = new OpenAPI\Client\Api\SignatureTransactionsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$organization_id = api-demo; // string | The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization
+$dst_id = new \OpenAPI\Client\Model\\OpenAPI\Client\Model\Id(); // \OpenAPI\Client\Model\Id | The **dst-id** is the uuid code that identifies a digital signature transaction. It is used as a path parameter to filter the requested operation to the specified **dst**
+
+try {
+    $result = $apiInstance->deleteDSTResources($organization_id, $dst_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SignatureTransactionsApi->deleteDSTResources: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organization_id** | **string**| The **organization-id** represents an organization that is included in the SigninToday application, also know as **slug** and it is used as a path parameter to restrict the asked functionality to the specified organization | [default to &#39;api-demo&#39;]
+ **dst_id** | [**\OpenAPI\Client\Model\Id**](../Model/.md)| The **dst-id** is the uuid code that identifies a digital signature transaction. It is used as a path parameter to filter the requested operation to the specified **dst** |
+
+### Return type
+
+[**\OpenAPI\Client\Model\InlineResponse20010**](../Model/InlineResponse20010.md)
 
 ### Authorization
 
@@ -342,7 +408,7 @@ Name | Type | Description  | Notes
 
 ## listDSTs
 
-> \OpenAPI\Client\Model\InlineResponse2006 listDSTs($organization_id, $where_signer, $where_status, $where_title, $where_created_by, $where_created, $where_signature_status, $where_document_name, $where_reason, $where_signature_name, $where_signer_group, $page, $count)
+> \OpenAPI\Client\Model\InlineResponse2008 listDSTs($organization_id, $where_signer, $where_status, $where_title, $where_created_by, $where_created, $where_signature_status, $where_document_name, $where_reason, $where_signature_name, $where_signer_group, $page, $count, $where_order)
 
 List the DSTs of an organization
 
@@ -372,7 +438,7 @@ $where_signer = jdo; // string | Returns the Digital Signature Transactions wher
 $where_status = performed; // string | Returns the Digital Signature Transactions with the specified status
 $where_title = Signature of a document; // string | Returns the Digital Signature Transactions that have the specified title
 $where_created_by = jdo@example; // string | Returns the Digital Signature Transactions created by the specified user
-$where_created = 2019-11-24 12:24:17.430000; // string | Returns the Digital Signature Transactions created before, after or in the declared range
+$where_created = 2019-11-24T12:24:17.430Z; // string | Returns the Digital Signature Transactions created before, after or in the declared range
 $where_signature_status = pending; // string | Returns the Digital Signature Transactions where at least one of the signers has the queried status
 $where_document_name = Document of example; // string | Returns the Digital Signature Transactions that have into its documents the queried one
 $where_reason = 'where_reason_example'; // string | Returns the Digital Signature Transactions with the specified reason
@@ -380,9 +446,10 @@ $where_signature_name = John Doe; // string | Returns the Digital Signature Tran
 $where_signer_group = @administrators; // string | Returns the Digital Signature Transactions that have the specified group of signers
 $page = 1; // int | Restricts the search to the chosen page
 $count = 100; // int | Sets the number of users per page to display
+$where_order = where_first_name; // string | The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \"**-**\" in front of the value indicates descending order), then the second value and so on
 
 try {
-    $result = $apiInstance->listDSTs($organization_id, $where_signer, $where_status, $where_title, $where_created_by, $where_created, $where_signature_status, $where_document_name, $where_reason, $where_signature_name, $where_signer_group, $page, $count);
+    $result = $apiInstance->listDSTs($organization_id, $where_signer, $where_status, $where_title, $where_created_by, $where_created, $where_signature_status, $where_document_name, $where_reason, $where_signature_name, $where_signer_group, $page, $count, $where_order);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SignatureTransactionsApi->listDSTs: ', $e->getMessage(), PHP_EOL;
@@ -408,10 +475,11 @@ Name | Type | Description  | Notes
  **where_signer_group** | **string**| Returns the Digital Signature Transactions that have the specified group of signers | [optional]
  **page** | **int**| Restricts the search to the chosen page | [optional]
  **count** | **int**| Sets the number of users per page to display | [optional] [default to 100]
+ **where_order** | **string**| The **where_order** query parameter takes one or more values separated by a comma and a space. The result will be ordered by the first value (ascending order is implied; a \&quot;**-**\&quot; in front of the value indicates descending order), then the second value and so on | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InlineResponse2006**](../Model/InlineResponse2006.md)
+[**\OpenAPI\Client\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
 
 ### Authorization
 

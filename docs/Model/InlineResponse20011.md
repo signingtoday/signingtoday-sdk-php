@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**\OpenAPI\Client\Model\Token[]**](Token.md) |  | [optional] 
 **meta** | [**\OpenAPI\Client\Model\MetaDataSuccess**](MetaDataSuccess.md) |  | [optional] 
-**pagination** | [**\OpenAPI\Client\Model\PaginationData**](PaginationData.md) |  | [optional] 
+**data** | [**\OpenAPI\Client\Model\AutomaticSignature**](AutomaticSignature.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
