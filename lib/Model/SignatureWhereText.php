@@ -1,6 +1,6 @@
 <?php
 /**
- * SignatureTransaction
+ * SignatureWhereText
  *
  * PHP version 5
  *
@@ -33,15 +33,14 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * SignatureTransaction Class Doc Comment
+ * SignatureWhereText Class Doc Comment
  *
  * @category Class
- * @description The Digital Signature Transaction is the object that makes possible a flow of signatures of one or more documents happen. Once there is an organization with some users, it is possible to create a dst through the definition of the document or the documents have to be signed, the signer or, eventually, the signers, grouping them, in this way it is possible to decide the order of the signatories will be followed. The status of the DST is _pending_ until all the signers have signed. Once that happens the status will change to _performed_.
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class SignatureTransaction implements ModelInterface, ArrayAccess
+class SignatureWhereText implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +49,7 @@ class SignatureTransaction implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'SignatureTransaction';
+    protected static $openAPIModelName = 'Signature_where_text';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,18 +57,9 @@ class SignatureTransaction implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'string',
-        'documents' => '\OpenAPI\Client\Model\Document[]',
-        'archived' => 'bool',
-        'created_by' => 'string',
-        'status' => 'string',
-        'created' => 'string',
-        'reason' => 'string',
-        'title' => 'string',
-        'not_after' => 'string',
-        'urlback' => 'string',
-        'cancelback' => 'string',
-        'template_name' => 'string'
+        'font' => '\OpenAPI\Client\Model\SignatureWhereFont',
+        'align' => 'string',
+        'format' => 'string[]'
     ];
 
     /**
@@ -78,18 +68,9 @@ class SignatureTransaction implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'id' => 'uuid',
-        'documents' => null,
-        'archived' => null,
-        'created_by' => 'any',
-        'status' => null,
-        'created' => 'dateTime',
-        'reason' => null,
-        'title' => 'any',
-        'not_after' => 'dateTime',
-        'urlback' => 'url',
-        'cancelback' => 'url',
-        'template_name' => 'any'
+        'font' => null,
+        'align' => null,
+        'format' => null
     ];
 
     /**
@@ -119,18 +100,9 @@ class SignatureTransaction implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'documents' => 'documents',
-        'archived' => 'archived',
-        'created_by' => 'created_by',
-        'status' => 'status',
-        'created' => 'created',
-        'reason' => 'reason',
-        'title' => 'title',
-        'not_after' => 'not_after',
-        'urlback' => 'urlback',
-        'cancelback' => 'cancelback',
-        'template_name' => 'template_name'
+        'font' => 'font',
+        'align' => 'align',
+        'format' => 'format'
     ];
 
     /**
@@ -139,18 +111,9 @@ class SignatureTransaction implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'documents' => 'setDocuments',
-        'archived' => 'setArchived',
-        'created_by' => 'setCreatedBy',
-        'status' => 'setStatus',
-        'created' => 'setCreated',
-        'reason' => 'setReason',
-        'title' => 'setTitle',
-        'not_after' => 'setNotAfter',
-        'urlback' => 'setUrlback',
-        'cancelback' => 'setCancelback',
-        'template_name' => 'setTemplateName'
+        'font' => 'setFont',
+        'align' => 'setAlign',
+        'format' => 'setFormat'
     ];
 
     /**
@@ -159,18 +122,9 @@ class SignatureTransaction implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'documents' => 'getDocuments',
-        'archived' => 'getArchived',
-        'created_by' => 'getCreatedBy',
-        'status' => 'getStatus',
-        'created' => 'getCreated',
-        'reason' => 'getReason',
-        'title' => 'getTitle',
-        'not_after' => 'getNotAfter',
-        'urlback' => 'getUrlback',
-        'cancelback' => 'getCancelback',
-        'template_name' => 'getTemplateName'
+        'font' => 'getFont',
+        'align' => 'getAlign',
+        'format' => 'getFormat'
     ];
 
     /**
@@ -214,16 +168,9 @@ class SignatureTransaction implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    const STATUS_WAITING = 'waiting';
-    const STATUS_PENDING = 'pending';
-    const STATUS_PERFORMED = 'performed';
-    const STATUS_EXPIRED = 'expired';
-    const STATUS_CANCELLED = 'cancelled';
-    const REASON_CANNOT_DOWNLOAD_DOCUMENT = 'CANNOT_DOWNLOAD_DOCUMENT';
-    const REASON_INVALID_DOCUMENT = 'INVALID_DOCUMENT';
-    const REASON_PROTECTED_DOCUMENT = 'PROTECTED_DOCUMENT';
-    const REASON_DECLINED = 'declined';
-    const REASON_MOTIVAZIONE_ESPLICITA = 'MOTIVAZIONE_ESPLICITA';
+    const ALIGN_LEFT = 'left';
+    const ALIGN_RIGHT = 'right';
+    const ALIGN_MIDDLE = 'middle';
     
 
     
@@ -232,30 +179,12 @@ class SignatureTransaction implements ModelInterface, ArrayAccess
      *
      * @return string[]
      */
-    public function getStatusAllowableValues()
+    public function getAlignAllowableValues()
     {
         return [
-            self::STATUS_WAITING,
-            self::STATUS_PENDING,
-            self::STATUS_PERFORMED,
-            self::STATUS_EXPIRED,
-            self::STATUS_CANCELLED,
-        ];
-    }
-    
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getReasonAllowableValues()
-    {
-        return [
-            self::REASON_CANNOT_DOWNLOAD_DOCUMENT,
-            self::REASON_INVALID_DOCUMENT,
-            self::REASON_PROTECTED_DOCUMENT,
-            self::REASON_DECLINED,
-            self::REASON_MOTIVAZIONE_ESPLICITA,
+            self::ALIGN_LEFT,
+            self::ALIGN_RIGHT,
+            self::ALIGN_MIDDLE,
         ];
     }
     
@@ -275,18 +204,9 @@ class SignatureTransaction implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['documents'] = isset($data['documents']) ? $data['documents'] : null;
-        $this->container['archived'] = isset($data['archived']) ? $data['archived'] : false;
-        $this->container['created_by'] = isset($data['created_by']) ? $data['created_by'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['created'] = isset($data['created']) ? $data['created'] : null;
-        $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
-        $this->container['title'] = isset($data['title']) ? $data['title'] : null;
-        $this->container['not_after'] = isset($data['not_after']) ? $data['not_after'] : null;
-        $this->container['urlback'] = isset($data['urlback']) ? $data['urlback'] : null;
-        $this->container['cancelback'] = isset($data['cancelback']) ? $data['cancelback'] : null;
-        $this->container['template_name'] = isset($data['template_name']) ? $data['template_name'] : null;
+        $this->container['font'] = isset($data['font']) ? $data['font'] : null;
+        $this->container['align'] = isset($data['align']) ? $data['align'] : null;
+        $this->container['format'] = isset($data['format']) ? $data['format'] : null;
     }
 
     /**
@@ -298,18 +218,10 @@ class SignatureTransaction implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+        $allowedValues = $this->getAlignAllowableValues();
+        if (!is_null($this->container['align']) && !in_array($this->container['align'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value for 'status', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getReasonAllowableValues();
-        if (!is_null($this->container['reason']) && !in_array($this->container['reason'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'reason', must be one of '%s'",
+                "invalid value for 'align', must be one of '%s'",
                 implode("', '", $allowedValues)
             );
         }
@@ -330,307 +242,82 @@ class SignatureTransaction implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets id
+     * Gets font
+     *
+     * @return \OpenAPI\Client\Model\SignatureWhereFont|null
+     */
+    public function getFont()
+    {
+        return $this->container['font'];
+    }
+
+    /**
+     * Sets font
+     *
+     * @param \OpenAPI\Client\Model\SignatureWhereFont|null $font font
+     *
+     * @return $this
+     */
+    public function setFont($font)
+    {
+        $this->container['font'] = $font;
+
+        return $this;
+    }
+
+    /**
+     * Gets align
      *
      * @return string|null
      */
-    public function getId()
+    public function getAlign()
     {
-        return $this->container['id'];
+        return $this->container['align'];
     }
 
     /**
-     * Sets id
+     * Sets align
      *
-     * @param string|null $id The uuid code that identifies the Digital Signature Transaction
+     * @param string|null $align align
      *
      * @return $this
      */
-    public function setId($id)
+    public function setAlign($align)
     {
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets documents
-     *
-     * @return \OpenAPI\Client\Model\Document[]|null
-     */
-    public function getDocuments()
-    {
-        return $this->container['documents'];
-    }
-
-    /**
-     * Sets documents
-     *
-     * @param \OpenAPI\Client\Model\Document[]|null $documents The _documents_ field is an array containing document objects, where everyone of them is defined as follows
-     *
-     * @return $this
-     */
-    public function setDocuments($documents)
-    {
-        $this->container['documents'] = $documents;
-
-        return $this;
-    }
-
-    /**
-     * Gets archived
-     *
-     * @return bool|null
-     */
-    public function getArchived()
-    {
-        return $this->container['archived'];
-    }
-
-    /**
-     * Sets archived
-     *
-     * @param bool|null $archived True if the DST's resources has been deleted
-     *
-     * @return $this
-     */
-    public function setArchived($archived)
-    {
-        $this->container['archived'] = $archived;
-
-        return $this;
-    }
-
-    /**
-     * Gets created_by
-     *
-     * @return string|null
-     */
-    public function getCreatedBy()
-    {
-        return $this->container['created_by'];
-    }
-
-    /**
-     * Sets created_by
-     *
-     * @param string|null $created_by The user created the Digital Signature Transaction
-     *
-     * @return $this
-     */
-    public function setCreatedBy($created_by)
-    {
-        $this->container['created_by'] = $created_by;
-
-        return $this;
-    }
-
-    /**
-     * Gets status
-     *
-     * @return string|null
-     */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-     * Sets status
-     *
-     * @param string|null $status The Digital Signature Transaction may have the following statuses:   - `waiting`: Not all the documents has ben uploaded and validated yet   - `pending`: The DST is ready to be signed   - `performed`: The DST has been signed by all the signers   - `expired`: The DST expired before all the signers have signed it   - `cancelled`: The DST has been canceled; the motivation is in the reason
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!is_null($status) && !in_array($status, $allowedValues, true)) {
+        $allowedValues = $this->getAlignAllowableValues();
+        if (!is_null($align) && !in_array($align, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value for 'status', must be one of '%s'",
+                    "Invalid value for 'align', must be one of '%s'",
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['status'] = $status;
+        $this->container['align'] = $align;
 
         return $this;
     }
 
     /**
-     * Gets created
+     * Gets format
      *
-     * @return string|null
+     * @return string[]|null
      */
-    public function getCreated()
+    public function getFormat()
     {
-        return $this->container['created'];
+        return $this->container['format'];
     }
 
     /**
-     * Sets created
+     * Sets format
      *
-     * @param string|null $created Date of creation of the Digital Signature Transaction
+     * @param string[]|null $format format
      *
      * @return $this
      */
-    public function setCreated($created)
+    public function setFormat($format)
     {
-        $this->container['created'] = $created;
-
-        return $this;
-    }
-
-    /**
-     * Gets reason
-     *
-     * @return string|null
-     */
-    public function getReason()
-    {
-        return $this->container['reason'];
-    }
-
-    /**
-     * Sets reason
-     *
-     * @param string|null $reason The motivations for the cancellation may be:   - `CANNOT_DOWNLOAD_DOCUMENT`: Signing Today could not download the     document   - `INVALID_DOCUMENT`: The downloaded document is not valid   - `PROTECTED_DOCUMENT`: The document is protected by password   - `declined`: One of the documents has been refused   - `MOTIVAZIONE_ESPLICITA`: Rejected from the system with a custom     reason
-     *
-     * @return $this
-     */
-    public function setReason($reason)
-    {
-        $allowedValues = $this->getReasonAllowableValues();
-        if (!is_null($reason) && !in_array($reason, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'reason', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['reason'] = $reason;
-
-        return $this;
-    }
-
-    /**
-     * Gets title
-     *
-     * @return string|null
-     */
-    public function getTitle()
-    {
-        return $this->container['title'];
-    }
-
-    /**
-     * Sets title
-     *
-     * @param string|null $title Title of the Digital Signature Transaction
-     *
-     * @return $this
-     */
-    public function setTitle($title)
-    {
-        $this->container['title'] = $title;
-
-        return $this;
-    }
-
-    /**
-     * Gets not_after
-     *
-     * @return string|null
-     */
-    public function getNotAfter()
-    {
-        return $this->container['not_after'];
-    }
-
-    /**
-     * Sets not_after
-     *
-     * @param string|null $not_after Deadline of the Digital Signature Transaction, expressed in ISO format
-     *
-     * @return $this
-     */
-    public function setNotAfter($not_after)
-    {
-        $this->container['not_after'] = $not_after;
-
-        return $this;
-    }
-
-    /**
-     * Gets urlback
-     *
-     * @return string|null
-     */
-    public function getUrlback()
-    {
-        return $this->container['urlback'];
-    }
-
-    /**
-     * Sets urlback
-     *
-     * @param string|null $urlback The url for the redirection from signature tray when the Digital Signature Transaction is completed or refused
-     *
-     * @return $this
-     */
-    public function setUrlback($urlback)
-    {
-        $this->container['urlback'] = $urlback;
-
-        return $this;
-    }
-
-    /**
-     * Gets cancelback
-     *
-     * @return string|null
-     */
-    public function getCancelback()
-    {
-        return $this->container['cancelback'];
-    }
-
-    /**
-     * Sets cancelback
-     *
-     * @param string|null $cancelback If set, in the signature tray will be displayed a button that needs to go back to a third part application
-     *
-     * @return $this
-     */
-    public function setCancelback($cancelback)
-    {
-        $this->container['cancelback'] = $cancelback;
-
-        return $this;
-    }
-
-    /**
-     * Gets template_name
-     *
-     * @return string|null
-     */
-    public function getTemplateName()
-    {
-        return $this->container['template_name'];
-    }
-
-    /**
-     * Sets template_name
-     *
-     * @param string|null $template_name A label to indicate the template used to create the Digital Signature Transaction
-     *
-     * @return $this
-     */
-    public function setTemplateName($template_name)
-    {
-        $this->container['template_name'] = $template_name;
+        $this->container['format'] = $format;
 
         return $this;
     }
